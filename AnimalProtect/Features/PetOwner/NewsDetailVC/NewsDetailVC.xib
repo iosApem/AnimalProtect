@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewsDetailVC">
+            <connections>
+                <outlet property="contentL" destination="QPi-lC-dgQ" id="yPh-xq-0em"/>
+                <outlet property="titleL" destination="F59-yM-59b" id="PaI-sk-mLT"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NKG-eM-JdT">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="有一种焦虑贩卖叫&quot;同龄人&quot;正在抛弃你" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F59-yM-59b">
+                            <rect key="frame" x="15" y="15" width="345" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPi-lC-dgQ" userLabel="焦虑是对亲人或自己生命安全、前途命运等的过度担心而产生的一种烦躁情绪。其中含有着急、挂念、忧愁、紧张、恐慌、不安等成分。它与危急情况和难以预测、难以应付的事件有关。...  分类 病理性焦虑">
+                            <rect key="frame" x="5" y="56" width="365" height="100.5"/>
+                            <string key="text">焦虑是对亲人或自己生命安全、前途命运等的过度担心而产生的一种烦躁情绪。其中含有着急、挂念、忧愁、紧张、恐慌、不安等成分。它与危急情况和难以预测、难以应付的事件有关。...
+
+分类 病理性焦虑</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.52156862745098043" green="0.52156862745098043" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="F59-yM-59b" secondAttribute="trailing" constant="15" id="3td-aa-vrz"/>
+                        <constraint firstAttribute="trailing" secondItem="QPi-lC-dgQ" secondAttribute="trailing" constant="5" id="FAx-Ku-9Rz"/>
+                        <constraint firstItem="F59-yM-59b" firstAttribute="centerX" secondItem="NKG-eM-JdT" secondAttribute="centerX" id="Fmv-mz-ctU"/>
+                        <constraint firstItem="QPi-lC-dgQ" firstAttribute="top" secondItem="F59-yM-59b" secondAttribute="bottom" constant="20" id="JC3-X0-Y55"/>
+                        <constraint firstAttribute="bottom" secondItem="QPi-lC-dgQ" secondAttribute="bottom" constant="5" id="NxP-c2-ipg"/>
+                        <constraint firstItem="F59-yM-59b" firstAttribute="top" secondItem="NKG-eM-JdT" secondAttribute="top" constant="15" id="jTV-wC-3lO"/>
+                        <constraint firstItem="F59-yM-59b" firstAttribute="leading" secondItem="NKG-eM-JdT" secondAttribute="leading" constant="15" id="rOZ-Wd-wup"/>
+                        <constraint firstItem="QPi-lC-dgQ" firstAttribute="leading" secondItem="NKG-eM-JdT" secondAttribute="leading" constant="5" id="uei-X8-eBo"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="NKG-eM-JdT" secondAttribute="trailing" id="Wch-cQ-AW8"/>
+                <constraint firstItem="NKG-eM-JdT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="a9K-Tr-HhH"/>
+                <constraint firstAttribute="bottom" secondItem="NKG-eM-JdT" secondAttribute="bottom" id="hBj-o0-FeY"/>
+                <constraint firstItem="NKG-eM-JdT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="p2Z-A8-bLw"/>
+            </constraints>
+            <point key="canvasLocation" x="325" y="78"/>
+        </view>
+    </objects>
+</document>

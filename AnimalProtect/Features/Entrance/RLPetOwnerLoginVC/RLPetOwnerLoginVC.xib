@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RLPetOwnerLoginVC">
+            <connections>
+                <outlet property="casualBtn" destination="DKZ-Sz-Odh" id="gYz-sp-0KJ"/>
+                <outlet property="imgV" destination="CDA-X8-3x5" id="pWN-yq-PBs"/>
+                <outlet property="loginBtn" destination="PZq-ev-WIW" id="7Pd-rw-733"/>
+                <outlet property="sendVerCodeBtn" destination="auW-4J-CTd" id="YEu-EA-Ay0"/>
+                <outlet property="userTFView" destination="Bbl-TA-mxt" id="BFk-Z4-Cbw"/>
+                <outlet property="verifyCodeTFView" destination="7VZ-Ra-zMe" id="yP3-0o-erJ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="CDA-X8-3x5">
+                    <rect key="frame" x="111.5" y="43" width="152" height="152"/>
+                    <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="152" id="DHD-6r-f5N"/>
+                        <constraint firstAttribute="height" constant="152" id="Uep-aA-zCl"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="76"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auW-4J-CTd" customClass="APRedBtn">
+                    <rect key="frame" x="190" y="308" width="133" height="42"/>
+                    <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="42" id="965-9T-UlT"/>
+                        <constraint firstAttribute="width" constant="133" id="rpy-em-UiM"/>
+                    </constraints>
+                    <state key="normal" title="发送验证码"/>
+                    <connections>
+                        <action selector="apRedBtnDidClick:" destination="-1" eventType="touchUpInside" id="D6O-zj-KZw"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZq-ev-WIW" customClass="APRedBtn">
+                    <rect key="frame" x="52" y="363" width="271" height="42"/>
+                    <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="271" id="G6w-qY-7nA"/>
+                        <constraint firstAttribute="height" constant="42" id="byY-I5-feC"/>
+                    </constraints>
+                    <state key="normal" title="登录"/>
+                    <connections>
+                        <action selector="apRedBtnDidClick:" destination="-1" eventType="touchUpInside" id="bbd-L9-Aeg"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DKZ-Sz-Odh" customClass="APRedBtn">
+                    <rect key="frame" x="52" y="422" width="271" height="42"/>
+                    <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="271" id="4bB-Cn-7sB"/>
+                        <constraint firstAttribute="height" constant="42" id="p6P-kJ-Jfa"/>
+                    </constraints>
+                    <state key="normal" title="随便逛逛"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="colorStyle">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="apRedBtnDidClick:" destination="-1" eventType="touchUpInside" id="CUN-HW-l9Q"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bbl-TA-mxt" customClass="APRoundTFView">
+                    <rect key="frame" x="52" y="260" width="271" height="40"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="271" id="Lca-gd-vxF"/>
+                        <constraint firstAttribute="height" constant="40" id="TBH-dW-h1i"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="用户名或手机号码"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7VZ-Ra-zMe" customClass="APRoundTFView">
+                    <rect key="frame" x="52" y="309" width="133" height="40"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="133" id="a84-hK-v93"/>
+                        <constraint firstAttribute="height" constant="40" id="tLk-Jg-UdQ"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="验证码"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="7VZ-Ra-zMe" firstAttribute="centerY" secondItem="auW-4J-CTd" secondAttribute="centerY" id="7vO-g5-9qe"/>
+                <constraint firstItem="7VZ-Ra-zMe" firstAttribute="leading" secondItem="PZq-ev-WIW" secondAttribute="leading" id="MDO-VB-uxz"/>
+                <constraint firstItem="7VZ-Ra-zMe" firstAttribute="leading" secondItem="Bbl-TA-mxt" secondAttribute="leading" id="Z1p-Sd-3ca"/>
+                <constraint firstItem="Bbl-TA-mxt" firstAttribute="centerX" secondItem="CDA-X8-3x5" secondAttribute="centerX" id="dtQ-ux-mVf"/>
+                <constraint firstItem="DKZ-Sz-Odh" firstAttribute="centerX" secondItem="PZq-ev-WIW" secondAttribute="centerX" id="hOa-FQ-Eer"/>
+                <constraint firstItem="DKZ-Sz-Odh" firstAttribute="top" secondItem="PZq-ev-WIW" secondAttribute="bottom" constant="17" id="nBr-8o-jKL"/>
+                <constraint firstItem="CDA-X8-3x5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="43" id="otE-lU-Jt1"/>
+                <constraint firstItem="CDA-X8-3x5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="s7b-kB-j05"/>
+                <constraint firstItem="Bbl-TA-mxt" firstAttribute="top" secondItem="CDA-X8-3x5" secondAttribute="bottom" constant="65" id="u1m-ny-gIA"/>
+                <constraint firstItem="7VZ-Ra-zMe" firstAttribute="top" secondItem="Bbl-TA-mxt" secondAttribute="bottom" constant="9" id="uFM-H7-my9"/>
+                <constraint firstItem="auW-4J-CTd" firstAttribute="leading" secondItem="7VZ-Ra-zMe" secondAttribute="trailing" constant="5" id="wYy-J1-3P4"/>
+                <constraint firstItem="PZq-ev-WIW" firstAttribute="top" secondItem="7VZ-Ra-zMe" secondAttribute="bottom" constant="14" id="ytH-tT-qyY"/>
+            </constraints>
+            <point key="canvasLocation" x="26.5" y="51.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="logo.jpg" width="317" height="303"/>
+    </resources>
+</document>

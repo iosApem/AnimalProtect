@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PetOwnerWBWorkVC">
+            <connections>
+                <outlet property="dogInfoV" destination="k0z-qr-LKN" id="RVf-8h-3ik"/>
+                <outlet property="imageView" destination="8Jl-ki-1Rr" id="yRl-D1-jsO"/>
+                <outlet property="newsV" destination="LIy-wc-FeY" id="UBS-jq-iee"/>
+                <outlet property="personInfoV" destination="a7C-Rh-Cba" id="PEK-Pe-aM6"/>
+                <outlet property="protectRecordV" destination="XhS-84-57O" id="2bm-Tq-kHw"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a7C-Rh-Cba" customClass="TopImgTitleView">
+                    <rect key="frame" x="0.0" y="10" width="125" height="81"/>
+                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="81" id="0Cr-GS-Gqc"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="个人信息"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="owner_info.png"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="9GG-9L-fDW"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k0z-qr-LKN" customClass="TopImgTitleView">
+                    <rect key="frame" x="125" y="10" width="125" height="81"/>
+                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="犬信息"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="apply_list.png"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="kw3-8h-8y9"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XhS-84-57O" customClass="TopImgTitleView">
+                    <rect key="frame" x="250" y="10" width="125" height="81"/>
+                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="immune_list.png"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="免疫记录"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="243-v0-unj"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LIy-wc-FeY" customClass="TopImgTitleView">
+                    <rect key="frame" x="0.0" y="99" width="125" height="81"/>
+                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="81" id="ODj-Ij-FlR"/>
+                        <constraint firstAttribute="width" constant="125" id="g7b-h8-tHO"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="最新时事"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="immune_list.png"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="C5j-LV-gIE"/>
+                    </connections>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Jl-ki-1Rr">
+                    <rect key="frame" x="101" y="458" width="172" height="175"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="172" id="Top-G6-lWy"/>
+                        <constraint firstAttribute="width" secondItem="8Jl-ki-1Rr" secondAttribute="height" multiplier="43:44" constant="1" id="t1I-o6-E2B"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="XhS-84-57O" secondAttribute="trailing" id="7fV-3P-hMv"/>
+                <constraint firstItem="a7C-Rh-Cba" firstAttribute="width" secondItem="k0z-qr-LKN" secondAttribute="width" id="GVe-jn-wxC"/>
+                <constraint firstItem="8Jl-ki-1Rr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="SZe-Bv-hF7"/>
+                <constraint firstAttribute="bottom" secondItem="8Jl-ki-1Rr" secondAttribute="bottom" constant="34" id="VDK-jc-ePo"/>
+                <constraint firstItem="XhS-84-57O" firstAttribute="leading" secondItem="k0z-qr-LKN" secondAttribute="trailing" id="Zna-aJ-N7q"/>
+                <constraint firstItem="k0z-qr-LKN" firstAttribute="leading" secondItem="a7C-Rh-Cba" secondAttribute="trailing" id="d90-Jz-23E"/>
+                <constraint firstItem="XhS-84-57O" firstAttribute="centerY" secondItem="k0z-qr-LKN" secondAttribute="centerY" id="eLx-4f-3Ge"/>
+                <constraint firstItem="LIy-wc-FeY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ePb-by-zNk"/>
+                <constraint firstItem="LIy-wc-FeY" firstAttribute="top" secondItem="a7C-Rh-Cba" secondAttribute="bottom" constant="8" id="hFt-33-nQN"/>
+                <constraint firstItem="a7C-Rh-Cba" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="hKT-ni-RJj"/>
+                <constraint firstItem="k0z-qr-LKN" firstAttribute="height" secondItem="XhS-84-57O" secondAttribute="height" id="kMK-S2-k8E"/>
+                <constraint firstItem="a7C-Rh-Cba" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mH3-xV-fml"/>
+                <constraint firstItem="a7C-Rh-Cba" firstAttribute="height" secondItem="k0z-qr-LKN" secondAttribute="height" id="mMR-7B-HJy"/>
+                <constraint firstItem="k0z-qr-LKN" firstAttribute="width" secondItem="XhS-84-57O" secondAttribute="width" id="tA9-d1-Qj6"/>
+                <constraint firstItem="k0z-qr-LKN" firstAttribute="centerY" secondItem="a7C-Rh-Cba" secondAttribute="centerY" id="xTV-uJ-l2q"/>
+            </constraints>
+            <point key="canvasLocation" x="14.5" y="-30.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="apply_list.png" width="64" height="64"/>
+        <image name="immune_list.png" width="64" height="64"/>
+        <image name="owner_info.png" width="64" height="64"/>
+    </resources>
+</document>

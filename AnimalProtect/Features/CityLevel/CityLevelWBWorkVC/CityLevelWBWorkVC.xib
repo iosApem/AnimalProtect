@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14109"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CityLevelWBWorkVC">
+            <connections>
+                <outlet property="petAdminV" destination="Pt6-sK-e1a" id="IJM-U6-kDM"/>
+                <outlet property="petOwnerAdminV" destination="A45-NT-jVY" id="Wk9-7L-f3H"/>
+                <outlet property="petOwnerCheckV" destination="tva-N9-vi5" id="tzu-wJ-SCT"/>
+                <outlet property="view" destination="X5D-13-ugZ" id="Cqa-7Y-Kjg"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="X5D-13-ugZ">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tva-N9-vi5" customClass="TopImgTitleView">
+                    <rect key="frame" x="0.0" y="10" width="125" height="81"/>
+                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="81" id="2CB-QI-XK8"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="畜主审核"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="owner_audit.png"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="a0v-sx-Jd2"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A45-NT-jVY" customClass="TopImgTitleView">
+                    <rect key="frame" x="125" y="10" width="125" height="81"/>
+                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="畜主管理"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="owner_info.png"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="gUf-Yh-ec6"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pt6-sK-e1a" customClass="TopImgTitleView">
+                    <rect key="frame" x="250" y="10" width="125" height="81"/>
+                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="immune_list.png"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="畜兔管理"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="jsp-LN-Cp9"/>
+                    </connections>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Pt6-sK-e1a" secondAttribute="trailing" id="6Wd-c3-dGg"/>
+                <constraint firstItem="tva-N9-vi5" firstAttribute="height" secondItem="A45-NT-jVY" secondAttribute="height" id="If7-cx-WVu"/>
+                <constraint firstItem="tva-N9-vi5" firstAttribute="top" secondItem="X5D-13-ugZ" secondAttribute="top" constant="10" id="LeX-SS-aWo"/>
+                <constraint firstItem="A45-NT-jVY" firstAttribute="width" secondItem="Pt6-sK-e1a" secondAttribute="width" id="NJz-dR-LAf"/>
+                <constraint firstItem="tva-N9-vi5" firstAttribute="width" secondItem="A45-NT-jVY" secondAttribute="width" id="PwL-uV-FSV"/>
+                <constraint firstItem="Pt6-sK-e1a" firstAttribute="leading" secondItem="A45-NT-jVY" secondAttribute="trailing" id="TeR-Q2-MAS"/>
+                <constraint firstItem="A45-NT-jVY" firstAttribute="leading" secondItem="tva-N9-vi5" secondAttribute="trailing" id="els-6y-dEq"/>
+                <constraint firstItem="A45-NT-jVY" firstAttribute="height" secondItem="Pt6-sK-e1a" secondAttribute="height" id="kIy-14-t3w"/>
+                <constraint firstItem="Pt6-sK-e1a" firstAttribute="centerY" secondItem="A45-NT-jVY" secondAttribute="centerY" id="oyn-kW-vx1"/>
+                <constraint firstItem="tva-N9-vi5" firstAttribute="leading" secondItem="X5D-13-ugZ" secondAttribute="leading" id="q7t-y3-Boc"/>
+                <constraint firstItem="A45-NT-jVY" firstAttribute="centerY" secondItem="tva-N9-vi5" secondAttribute="centerY" id="so2-XH-DZo"/>
+            </constraints>
+            <point key="canvasLocation" x="14.5" y="-30.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="immune_list.png" width="64" height="64"/>
+        <image name="owner_audit.png" width="64" height="64"/>
+        <image name="owner_info.png" width="64" height="64"/>
+    </resources>
+</document>

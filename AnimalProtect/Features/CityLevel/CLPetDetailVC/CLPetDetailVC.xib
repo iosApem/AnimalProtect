@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CLPetDetailVC">
+            <connections>
+                <outlet property="cameraBtn" destination="esq-jP-D38" id="gJ1-wo-nFB"/>
+                <outlet property="dogAgeCell" destination="hzz-Um-tdI" id="xyR-zP-ErV"/>
+                <outlet property="dogColorCell" destination="pdd-UI-1uG" id="sbT-8b-8Vr"/>
+                <outlet property="dogIDCell" destination="3CN-KA-CP6" id="E6w-ze-Uc0"/>
+                <outlet property="dogTypeCell" destination="pti-d8-htW" id="aXH-GZ-ue7"/>
+                <outlet property="dogWeightCell" destination="3oI-lY-ZD5" id="Nes-UK-zSo"/>
+                <outlet property="nineSapceView" destination="lO7-Vf-Jng" id="8yr-cX-dVR"/>
+                <outlet property="nineViewConsHeight" destination="FEb-mj-ltP" id="8J4-XO-Mhe"/>
+                <outlet property="remarkCell" destination="mGF-RV-T2X" id="QoP-xd-g1Q"/>
+                <outlet property="returnBtn" destination="uB1-Fo-NiJ" id="gZ1-po-ILo"/>
+                <outlet property="saveBtn" destination="pgi-QD-8HD" id="cvN-Al-3rd"/>
+                <outlet property="scrollView" destination="8Lc-nA-oYd" id="8Do-pB-0e6"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="8Lc-nA-oYd">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3CN-KA-CP6" customClass="CommTVCellView">
+                            <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="xYb-in-5ke"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="犬编号"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="234343"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="tfEnable" value="NO"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="MuP-d2-p1w"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pti-d8-htW" customClass="CommTFSelectView">
+                            <rect key="frame" x="0.0" y="79" width="375" height="44"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="WBL-wg-FxJ"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="犬种"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="mode">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="Bsv-lZ-4rl"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pdd-UI-1uG" customClass="CommTVCellView">
+                            <rect key="frame" x="0.0" y="138" width="375" height="44"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="Ggc-Fh-exB"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="毛色"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="金色"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="tfEnable" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="Bjs-ya-aIB"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hzz-Um-tdI" customClass="CommTVCellView">
+                            <rect key="frame" x="0.0" y="197" width="375" height="44"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="IUh-Jy-GGq"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="犬龄"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="3"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="tfEnable" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="yUf-zY-JDa"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3oI-lY-ZD5" customClass="CommTVCellView">
+                            <rect key="frame" x="0.0" y="256" width="375" height="44"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="dUE-pE-lOK"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="体重"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="3kg"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="tfEnable" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="Zvu-x9-3fe"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mGF-RV-T2X" customClass="CommTVCellView">
+                            <rect key="frame" x="0.0" y="315" width="375" height="44"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="ogo-Sf-7yP"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="title" value="备注"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="这只狗棒棒的"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="tfEnable" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="VKz-9h-ENn"/>
+                            </connections>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esq-jP-D38" customClass="APRedBtn">
+                            <rect key="frame" x="30" y="474" width="315" height="42"/>
+                            <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="42" id="hKB-Gz-HJ4"/>
+                            </constraints>
+                            <state key="normal" title="拍照"/>
+                            <connections>
+                                <action selector="cameraBtnDidClick:" destination="-1" eventType="touchUpInside" id="UT8-lB-uHo"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgi-QD-8HD" customClass="APRedBtn">
+                            <rect key="frame" x="30" y="531" width="315" height="42"/>
+                            <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="42" id="zfi-x6-m4a"/>
+                            </constraints>
+                            <state key="normal" title="提交保存"/>
+                            <connections>
+                                <action selector="submitBtnDidClick:" destination="-1" eventType="touchUpInside" id="lO0-LL-8aG"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uB1-Fo-NiJ" customClass="APRedBtn">
+                            <rect key="frame" x="30" y="588" width="315" height="42"/>
+                            <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="42" id="frO-ap-pET"/>
+                            </constraints>
+                            <state key="normal" title="返回"/>
+                            <connections>
+                                <action selector="returnBtnDidClick:" destination="-1" eventType="touchUpInside" id="4QJ-WR-9Kg"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lO7-Vf-Jng" userLabel="nineSapceView" customClass="NineSpaceImagesView">
+                            <rect key="frame" x="15" y="374" width="345" height="85"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="85" id="FEb-mj-ltP"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="3CN-KA-CP6" firstAttribute="centerX" secondItem="8Lc-nA-oYd" secondAttribute="centerX" id="0Dg-3A-e4b"/>
+                        <constraint firstItem="pti-d8-htW" firstAttribute="trailing" secondItem="3CN-KA-CP6" secondAttribute="trailing" id="2Ej-V7-HKM"/>
+                        <constraint firstItem="3oI-lY-ZD5" firstAttribute="trailing" secondItem="hzz-Um-tdI" secondAttribute="trailing" id="5V1-8K-Osw"/>
+                        <constraint firstAttribute="trailing" secondItem="uB1-Fo-NiJ" secondAttribute="trailing" constant="30" id="6mp-59-v8q"/>
+                        <constraint firstItem="pti-d8-htW" firstAttribute="top" secondItem="3CN-KA-CP6" secondAttribute="bottom" constant="15" id="A2n-26-iAR"/>
+                        <constraint firstAttribute="bottom" secondItem="uB1-Fo-NiJ" secondAttribute="bottom" constant="164" id="A4S-NC-fM5"/>
+                        <constraint firstItem="uB1-Fo-NiJ" firstAttribute="centerX" secondItem="pgi-QD-8HD" secondAttribute="centerX" id="Abf-8P-OvK"/>
+                        <constraint firstItem="esq-jP-D38" firstAttribute="centerX" secondItem="mGF-RV-T2X" secondAttribute="centerX" id="Atm-eH-8Kb"/>
+                        <constraint firstItem="esq-jP-D38" firstAttribute="leading" secondItem="8Lc-nA-oYd" secondAttribute="leading" constant="30" id="Fhr-sM-Tfw"/>
+                        <constraint firstItem="hzz-Um-tdI" firstAttribute="leading" secondItem="pdd-UI-1uG" secondAttribute="leading" id="KHa-6l-r14"/>
+                        <constraint firstItem="mGF-RV-T2X" firstAttribute="top" secondItem="3oI-lY-ZD5" secondAttribute="bottom" constant="15" id="OuB-xV-nyh"/>
+                        <constraint firstItem="pgi-QD-8HD" firstAttribute="leading" secondItem="8Lc-nA-oYd" secondAttribute="leading" constant="30" id="P0i-EV-81I"/>
+                        <constraint firstItem="pgi-QD-8HD" firstAttribute="centerX" secondItem="esq-jP-D38" secondAttribute="centerX" id="PDX-bJ-hqK"/>
+                        <constraint firstItem="3CN-KA-CP6" firstAttribute="leading" secondItem="8Lc-nA-oYd" secondAttribute="leading" id="PZM-ig-hN9"/>
+                        <constraint firstAttribute="trailing" secondItem="esq-jP-D38" secondAttribute="trailing" constant="30" id="Sjn-lW-sE2"/>
+                        <constraint firstAttribute="trailing" secondItem="lO7-Vf-Jng" secondAttribute="trailing" constant="15" id="VuT-yt-MpD"/>
+                        <constraint firstItem="3CN-KA-CP6" firstAttribute="top" secondItem="8Lc-nA-oYd" secondAttribute="top" constant="20" id="WDA-lR-lRA"/>
+                        <constraint firstAttribute="trailing" secondItem="3CN-KA-CP6" secondAttribute="trailing" id="WnJ-iH-U1m"/>
+                        <constraint firstItem="hzz-Um-tdI" firstAttribute="trailing" secondItem="pdd-UI-1uG" secondAttribute="trailing" id="X37-97-AAc"/>
+                        <constraint firstItem="lO7-Vf-Jng" firstAttribute="leading" secondItem="8Lc-nA-oYd" secondAttribute="leading" constant="15" id="aDY-OJ-zTs"/>
+                        <constraint firstItem="pdd-UI-1uG" firstAttribute="leading" secondItem="pti-d8-htW" secondAttribute="leading" id="aqN-OJ-fLe"/>
+                        <constraint firstItem="uB1-Fo-NiJ" firstAttribute="leading" secondItem="8Lc-nA-oYd" secondAttribute="leading" constant="30" id="ay1-OE-0yZ"/>
+                        <constraint firstItem="pgi-QD-8HD" firstAttribute="top" secondItem="esq-jP-D38" secondAttribute="bottom" constant="15" id="beD-zc-026"/>
+                        <constraint firstItem="pdd-UI-1uG" firstAttribute="trailing" secondItem="pti-d8-htW" secondAttribute="trailing" id="bxq-sI-Tax"/>
+                        <constraint firstItem="pti-d8-htW" firstAttribute="leading" secondItem="3CN-KA-CP6" secondAttribute="leading" id="hdX-6g-fid"/>
+                        <constraint firstItem="pdd-UI-1uG" firstAttribute="top" secondItem="pti-d8-htW" secondAttribute="bottom" constant="15" id="iqF-0a-Kjq"/>
+                        <constraint firstItem="esq-jP-D38" firstAttribute="top" secondItem="lO7-Vf-Jng" secondAttribute="bottom" constant="15" id="jTm-Vl-9hu"/>
+                        <constraint firstItem="mGF-RV-T2X" firstAttribute="leading" secondItem="3oI-lY-ZD5" secondAttribute="leading" id="myQ-e4-xRG"/>
+                        <constraint firstItem="hzz-Um-tdI" firstAttribute="top" secondItem="pdd-UI-1uG" secondAttribute="bottom" constant="15" id="p2f-9k-Zab"/>
+                        <constraint firstItem="3oI-lY-ZD5" firstAttribute="top" secondItem="hzz-Um-tdI" secondAttribute="bottom" constant="15" id="pF1-hU-Nry"/>
+                        <constraint firstItem="lO7-Vf-Jng" firstAttribute="top" secondItem="mGF-RV-T2X" secondAttribute="bottom" constant="15" id="pz6-XG-9bw"/>
+                        <constraint firstAttribute="trailing" secondItem="pgi-QD-8HD" secondAttribute="trailing" constant="30" id="srt-wl-NCK"/>
+                        <constraint firstItem="uB1-Fo-NiJ" firstAttribute="top" secondItem="pgi-QD-8HD" secondAttribute="bottom" constant="15" id="su9-Mm-68N"/>
+                        <constraint firstItem="mGF-RV-T2X" firstAttribute="trailing" secondItem="3oI-lY-ZD5" secondAttribute="trailing" id="uqF-4a-o8d"/>
+                        <constraint firstItem="3oI-lY-ZD5" firstAttribute="leading" secondItem="hzz-Um-tdI" secondAttribute="leading" id="wT6-Ny-Fzo"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="8Lc-nA-oYd" secondAttribute="bottom" id="6YK-Ha-gkZ"/>
+                <constraint firstItem="8Lc-nA-oYd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="JdT-ed-wct"/>
+                <constraint firstAttribute="trailing" secondItem="8Lc-nA-oYd" secondAttribute="trailing" id="jAx-LU-0mD"/>
+                <constraint firstItem="8Lc-nA-oYd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="sdz-Fn-4xl"/>
+            </constraints>
+            <point key="canvasLocation" x="-68.5" y="110.5"/>
+        </view>
+    </objects>
+</document>

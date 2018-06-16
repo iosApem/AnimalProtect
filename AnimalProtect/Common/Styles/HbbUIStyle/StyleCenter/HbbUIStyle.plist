@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ColorStyle</key>
+	<dict>
+		<key>ButtonRedColor</key>
+		<string>#FF4500</string>
+		<key>ButtonBlueColor</key>
+		<string>#87CEFA</string>
+		<key>ButtonDiableColor</key>
+		<string>#D3D3D3</string>
+		<key>NavColor</key>
+		<string>#00BFFF</string>
+		<key>TextFieldRoundYellow</key>
+		<string>#FFDEAD</string>
+		<key>TextFieldRoundNormal</key>
+		<string>#DCDCDC	</string>
+		<key>TextColor</key>
+		<string>#242424</string>
+		<key>LightTextColor</key>
+		<string>#858585</string>
+		<key>LineDisableColor</key>
+		<string>#F5F5F5</string>
+		<key>LineHighlightColor</key>
+		<string>#F08080</string>
+		<key>LineEnableColor</key>
+		<string>#CDCDC1</string>
+	</dict>
+	<key>FontSizeStyle</key>
+	<dict>
+		<key>L</key>
+		<string>17</string>
+		<key>M</key>
+		<integer>16</integer>
+		<key>S</key>
+		<string>14</string>
+	</dict>
+</dict>
+</plist>

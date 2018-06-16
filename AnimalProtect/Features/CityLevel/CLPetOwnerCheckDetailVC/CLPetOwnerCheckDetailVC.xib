@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CLPetOwnerCheckDetailVC">
+            <connections>
+                <outlet property="addressV" destination="xpK-kh-Cpt" id="WNT-s9-9iv"/>
+                <outlet property="dogManID" destination="WvJ-nX-cEe" id="4JM-Yg-QRS"/>
+                <outlet property="nameV" destination="KoM-Se-J69" id="Qii-DT-RwV"/>
+                <outlet property="orgNameV" destination="dgJ-YV-MUa" id="iK0-N8-9vd"/>
+                <outlet property="phoneV" destination="OZd-b1-GaR" id="PP7-sV-Od6"/>
+                <outlet property="saveBtn" destination="sIw-qJ-SVG" id="C6d-to-mIk"/>
+                <outlet property="view" destination="DTh-4w-Olu" id="Lf5-jU-Kpb"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="DTh-4w-Olu">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OZd-b1-GaR" customClass="CommTVCellView">
+                    <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Uk9-uZ-AQN"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="手机号码"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="15692414056"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="tfEnable" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WvJ-nX-cEe" customClass="CommTVCellView">
+                    <rect key="frame" x="0.0" y="79" width="375" height="44"/>
+                    <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="vPU-bE-6ds"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="犬主编号"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="0001"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="tfEnable" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KoM-Se-J69" customClass="CommTVCellView">
+                    <rect key="frame" x="0.0" y="138" width="375" height="44"/>
+                    <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="dTX-gr-aTE"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="姓名"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="忘了爱"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="tfEnable" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgJ-YV-MUa" customClass="CommTVCellView">
+                    <rect key="frame" x="0.0" y="197" width="375" height="44"/>
+                    <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="rcG-aN-jUC"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="机构"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="未知名机构"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="tfEnable" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xpK-kh-Cpt" customClass="CommTVCellView">
+                    <rect key="frame" x="0.0" y="256" width="375" height="44"/>
+                    <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="mut-Mp-EzA"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="地址"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="广州省广州市越秀区"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="tfEnable" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sIw-qJ-SVG" customClass="APRedBtn">
+                    <rect key="frame" x="30" y="320" width="315" height="42"/>
+                    <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="42" id="CP7-9f-Trt"/>
+                    </constraints>
+                    <state key="normal" title="审核通过"/>
+                    <connections>
+                        <action selector="saveBtnDidClick:" destination="-1" eventType="touchUpInside" id="Oge-b4-5Yf"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="dgJ-YV-MUa" firstAttribute="trailing" secondItem="KoM-Se-J69" secondAttribute="trailing" id="6wk-KE-1wz"/>
+                <constraint firstItem="dgJ-YV-MUa" firstAttribute="top" secondItem="KoM-Se-J69" secondAttribute="bottom" constant="15" id="9sx-YP-M7Q"/>
+                <constraint firstItem="xpK-kh-Cpt" firstAttribute="trailing" secondItem="dgJ-YV-MUa" secondAttribute="trailing" id="Ez2-Bo-bc9"/>
+                <constraint firstItem="OZd-b1-GaR" firstAttribute="top" secondItem="DTh-4w-Olu" secondAttribute="top" constant="20" id="HBf-w2-LYQ"/>
+                <constraint firstItem="KoM-Se-J69" firstAttribute="top" secondItem="WvJ-nX-cEe" secondAttribute="bottom" constant="15" id="Jk4-xa-T0w"/>
+                <constraint firstItem="xpK-kh-Cpt" firstAttribute="top" secondItem="dgJ-YV-MUa" secondAttribute="bottom" constant="15" id="OAx-ML-pD7"/>
+                <constraint firstAttribute="trailing" secondItem="OZd-b1-GaR" secondAttribute="trailing" id="PT6-SP-QAq"/>
+                <constraint firstItem="sIw-qJ-SVG" firstAttribute="leading" secondItem="DTh-4w-Olu" secondAttribute="leading" constant="30" id="RSj-3p-j4b"/>
+                <constraint firstItem="KoM-Se-J69" firstAttribute="leading" secondItem="WvJ-nX-cEe" secondAttribute="leading" id="U1e-M2-cwg"/>
+                <constraint firstItem="dgJ-YV-MUa" firstAttribute="leading" secondItem="KoM-Se-J69" secondAttribute="leading" id="bLP-aY-E4M"/>
+                <constraint firstItem="sIw-qJ-SVG" firstAttribute="top" secondItem="xpK-kh-Cpt" secondAttribute="bottom" constant="20" id="cNR-aP-a6o"/>
+                <constraint firstItem="xpK-kh-Cpt" firstAttribute="leading" secondItem="dgJ-YV-MUa" secondAttribute="leading" id="eQK-jK-Khn"/>
+                <constraint firstItem="WvJ-nX-cEe" firstAttribute="leading" secondItem="OZd-b1-GaR" secondAttribute="leading" id="gCc-ns-wb8"/>
+                <constraint firstItem="KoM-Se-J69" firstAttribute="trailing" secondItem="WvJ-nX-cEe" secondAttribute="trailing" id="nTQ-a3-pRX"/>
+                <constraint firstAttribute="trailing" secondItem="sIw-qJ-SVG" secondAttribute="trailing" constant="30" id="oaj-kc-lHv"/>
+                <constraint firstItem="OZd-b1-GaR" firstAttribute="leading" secondItem="DTh-4w-Olu" secondAttribute="leading" id="qFJ-O7-RJZ"/>
+                <constraint firstItem="WvJ-nX-cEe" firstAttribute="trailing" secondItem="OZd-b1-GaR" secondAttribute="trailing" id="rF0-M1-mtJ"/>
+                <constraint firstItem="WvJ-nX-cEe" firstAttribute="top" secondItem="OZd-b1-GaR" secondAttribute="bottom" constant="15" id="s4R-SC-Shm"/>
+            </constraints>
+            <point key="canvasLocation" x="52.5" y="78.5"/>
+        </view>
+    </objects>
+</document>
