@@ -738,8 +738,8 @@
 		1818601320A5E7A600B81082 /* PetOwnerWBWorkVC */ = {
 			isa = PBXGroup;
 			children = (
-				1818601420A5E7A600B81082 /* PetOwnerWBWorkVC.m */,
 				1818601520A5E7A600B81082 /* PetOwnerWBWorkVC.h */,
+				1818601420A5E7A600B81082 /* PetOwnerWBWorkVC.m */,
 				1818601620A5E7A600B81082 /* PetOwnerWBWorkVC.xib */,
 			);
 			path = PetOwnerWBWorkVC;

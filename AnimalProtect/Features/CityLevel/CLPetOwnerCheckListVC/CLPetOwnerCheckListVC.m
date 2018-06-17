@@ -12,7 +12,7 @@
 #import "CLPetOwner.h"
 #import "CLPetOwnerCheckDetailVC.h"
 
-@interface CLPetOwnerCheckListVC ()
+@interface CLPetOwnerCheckListVC ()<CLPetOwnerCheckDetailVCDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tb;
 
@@ -80,12 +80,23 @@
     
     CLPetOwnerCheckDetailVC *vc = [[CLPetOwnerCheckDetailVC alloc] init];
     vc.ownerID = obj.ownerNo;
+    vc.delegate = self;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 88;
+}
+
+#pragma mark - CLPetOwnerCheckDetailVCDelegate
+
+- (void)clPetOwnerCheckDetailVC:(CLPetOwnerCheckDetailVC *)clPetOwnerCheckDetailVC ownerDidCheck:(CLPetOwner *)owner
+{
+    [self.navigationController popViewControllerAnimated:YES];
+    
+    //调用刷新
+    [self requestCheckList];
 }
 
 #pragma mark - 功能

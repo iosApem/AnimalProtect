@@ -12,6 +12,7 @@
 #import "CLPetListVC.h"
 #import "NewsListVC.h"
 #import "CLPetImmuneListVC.h"
+#import "APUsers.h"
 
 @interface PetOwnerWBWorkVC ()<TopImgTitleViewDelegate>
 
@@ -43,6 +44,9 @@
     //个人信息
     if (topImgTitleView == self.personInfoV) {
         CLPetOwnerEditVC *vc = [[CLPetOwnerEditVC alloc] init];
+        APUsers *users = [APUsers currentUser];
+        vc.petOwnerID = users.UserID;
+        vc.type = CLPetOwnerEditVCTypeSee;
         [self.navigationController pushViewController:vc animated:YES];
     //犬信息
     } else if (topImgTitleView == self.dogInfoV) {

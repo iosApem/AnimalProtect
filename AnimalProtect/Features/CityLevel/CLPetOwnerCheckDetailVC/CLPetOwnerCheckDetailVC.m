@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet CommTVCellView *addressV;
 @property (weak, nonatomic) IBOutlet APRedBtn *saveBtn;
 
+@property (nonatomic, strong) CLPetOwner *owner;
 @property (nonatomic, strong) CityLevelDataService *dataService;
 
 @end
@@ -48,17 +49,6 @@
     self.addressV.text = person.address;
 }
 
-- (CLPetOwner *)getPersonFromNib
-{
-    CLPetOwner *person = [[CLPetOwner alloc] init];
-    person.telephone = self.phoneV.text;
-    person.ownerNo = self.dogManID.text;
-    person.name = self.nameV.text;
-    person.orgName = self.orgNameV.text;
-    person.address = self.addressV.text;
-    return person;
-}
-
 #pragma mark - IBAction
 
 - (IBAction)saveBtnDidClick:(APRedBtn *)sender
@@ -73,7 +63,8 @@
     [self showHUBText:@"正在加载.."];
     [self.dataService requestCheckWithOwnerNo:self.ownerID succ:^(CLPetOwner *owner) {
         [self hiddenHUB];
-        [self setNibWithModel:owner];
+        self.owner = owner;
+        [self setNibWithModel:self.owner];
     } fail:^(NSError *error) {
         [self hiddenHUB];
         [self toast:error.domain];
@@ -82,12 +73,15 @@
 
 - (void)submitSheet
 {
-    CLPetOwner *person = [self getPersonFromNib];
+    CLPetOwner *person = self.owner;
     
     [self showHUBText:@"正在提交.."];
     [self.dataService requestSubmitCheck:person succ:^{
         [self hiddenHUB];
-        [self.navigationController popViewControllerAnimated:YES];
+        
+        if (self.delegate && [self.delegate respondsToSelector:@selector(clPetOwnerCheckDetailVC:ownerDidCheck:)]) {
+            [self.delegate clPetOwnerCheckDetailVC:self ownerDidCheck:self.owner];
+        }
         
     } fail:^(NSError *error) {
         [self hiddenHUB];

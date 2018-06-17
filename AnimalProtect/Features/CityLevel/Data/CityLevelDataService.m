@@ -7,6 +7,8 @@
 //
 
 #import "CityLevelDataService.h"
+#import "CLPetOwner.h"
+#import "APHTTPResult.h"
 
 @implementation CityLevelDataService
 
@@ -125,8 +127,13 @@
     NSDictionary *dict = @{@"data": jsonstring};
     [[APHTTPSession sharedSession] httpGETWithKey:api_key_DogOwnerSaveByJson_action param:dict progress:nil succ:^(id responseObject) {
         
-        if (succ) {
-            succ();
+        
+        APHTTPResult *owner = [APHTTPResult mj_objectWithKeyValues:responseObject];
+        if (owner.success == YES) {
+            if (succ) (succ)();
+        } else {
+            NSError *error = [NSError errorWithDomain:owner.message code:-1 userInfo:nil];
+            if(fail) fail(error);
         }
         
     } fail:^(NSError *error) {

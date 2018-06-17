@@ -17,10 +17,15 @@
     
     NSError *err = [self validateLoginUser:users];
     if (err == nil) {
+        __block APUsers *block_user = users;
+        
         NSDictionary *dict = @{@"userName": (users.UserName ?: @""), @"password": (users.PWD ?: @"")};
         [[APHTTPSession sharedSession] httpGETWithKey:api_key_core_LoginJson_action param:dict progress:nil succ:^(id responseObject) {
             
             APHTTPResult *rs = [[APHTTPResult alloc] initWithString:responseObject error:nil];
+            
+            [APUsers setCurrentUser:block_user];
+            
             if (rs.success == YES) {
                 if (succ) {
                     succ();
