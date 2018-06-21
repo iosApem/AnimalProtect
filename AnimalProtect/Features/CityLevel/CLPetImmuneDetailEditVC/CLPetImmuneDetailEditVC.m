@@ -22,7 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @property (weak, nonatomic) IBOutlet CommTVCellView *immuneNoCell; //流水号
-@property (weak, nonatomic) IBOutlet CommTFSelectView *ownerNameCell;
+@property (weak, nonatomic) IBOutlet CommTFSelectView *ownerNameCell; //宠物主
 @property (weak, nonatomic) IBOutlet CommTFSelectView *dogNameCell;
 @property (weak, nonatomic) IBOutlet CommTVCellView *immuneTimeCell;
 @property (weak, nonatomic) IBOutlet CommTVCellView *immunityQtyCell;
@@ -36,6 +36,7 @@
 
 @property (nonatomic, strong) CityLevelDataService *dataService;
 @property (nonatomic, strong) CLBaseListDataService *baseListService;
+@property (nonatomic, strong) CLImmuneRecord *record;
 
 @end
 
@@ -47,6 +48,11 @@
     
     self.dataService = [[CityLevelDataService alloc] init];
     self.baseListService = [[CLBaseListDataService alloc] init];
+    
+    //如果是新增的则创建免疫对象
+    self.record = [[CLImmuneRecord alloc] init];
+    NSDate *date = [NSDate date];
+    self.record.immuneTime = [NSString datetimeStrWithDate:date];
 }
 
 - (void)initSubviews
@@ -64,7 +70,7 @@
 {
     [super initData];
     
-    [self setNibWithModel:nil];
+    [self setNibWithModel:self.record];
     
     //编辑
     if(self.immuneID != nil) {
@@ -94,8 +100,51 @@
     self.immunityQtyCell.text = record.immunityQty;
     self.vaccineQtyCell.text = record.vaccineQty;
     self.vaccineBatchCell.text = record.vaccineBatch;
-    self.dogNameCell.selectObject = [CommTFSelectObject objWithCode:nil name:record.vaccineFactory];
-    self.dogNameCell.selectObject = [CommTFSelectObject objWithCode:nil name:record.vaccineKind];
+    self.vaccineFactoryCell.selectObject = [CommTFSelectObject objWithCode:nil name:record.vaccineFactory];
+    self.vaccineKindCell.selectObject = [CommTFSelectObject objWithCode:nil name:record.vaccineKind];
+    
+//    //编辑
+//    if(self.immuneID != nil) {
+    if ([NSString notBlank:record.immunityQty] == YES) {
+        self.immunityQtyCell.tfEnable = NO;
+    } else {
+        self.immunityQtyCell.tfEnable = YES;
+    }
+    
+    if ([NSString notBlank:record.vaccineQty] == YES) {
+        self.vaccineQtyCell.tfEnable = NO;
+    } else {
+        self.vaccineQtyCell.tfEnable = YES;
+    }
+    
+    if([NSString notBlank:record.dogName] == YES) {
+        self.dogNameCell.enable = NO;
+    } else {
+        self.dogNameCell.enable = YES;
+    }
+    
+    if([NSString notBlank:record.ownerNo] == YES) {
+        self.ownerNameCell.enable = NO;
+    } else {
+        self.ownerNameCell.enable = YES;
+    }
+    
+    if([NSString notBlank:record.vaccineFactory] == YES) {
+        self.vaccineFactoryCell.enable = NO;
+    } else {
+        self.vaccineFactoryCell.enable = YES;
+    }
+    
+    if([NSString notBlank:record.vaccineKind] == YES) {
+        self.vaccineKindCell.enable = NO;
+    } else {
+        self.vaccineKindCell.enable = YES;
+    }
+    
+//    //新增
+//    } else {
+//        //do something
+//    }
 }
 
 
@@ -108,7 +157,8 @@
 
 - (CLImmuneRecord *)getModelFromNib
 {
-    CLImmuneRecord *record = [[CLImmuneRecord alloc] init];
+    CLImmuneRecord *record = self.record;
+    
     record.immuneNo = self.immuneNoCell.text;
     record.ownerNo = self.ownerNameCell.selectObject.CODE;
     record.ownerName = self.ownerNameCell.selectObject.NAME;
@@ -153,8 +203,11 @@
 {
     [self showHUBText:@"正在加载.."];
     [self.dataService requestImmuneWithId:immuneID succ:^(CLImmuneRecord *record) {
+        
         [self hiddenHUB];
-        [self setNibWithModel:record];
+        
+        self.record = record;
+        [self setNibWithModel:self.record];
         
     } fail:^(NSError *error) {
         [self hiddenHUB];
@@ -182,10 +235,10 @@
  */
 - (void)requestDogOwner
 {
-    [self.baseListService getCLSysDictWithType:CLSysDictTypePetKind succ:^(NSArray *array) {
+    [self.dataService requestPetOwnerListWithSucc:^(NSArray *array) {
         
-        NSArray *arr = [CLSysDict selectObjectArrWithArr:array];
-        self.dogNameCell.selectObjectArray = arr;
+        NSArray<CommTFSelectObject *> *objArray = [CLPetOwner dictArrayWithArray:array];
+        self.ownerNameCell.selectObjectArray = objArray;
         
     } fail:^(NSError *error) {
         [self toast:error.domain];

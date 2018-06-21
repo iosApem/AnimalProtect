@@ -43,7 +43,7 @@
     [[APHTTPSession sharedSession] httpGETWithKey:api_key_dog_DogOwnerImmuneJson_action param:dict progress:nil succ:^(id responseObject) {
         
         if (succ) {
-            NSArray *arr = [CLPetOwner mj_objectArrayWithKeyValuesArray:responseObject];
+            NSArray *arr = [CLImmuneRecord mj_objectArrayWithKeyValuesArray:responseObject];
             
             CLImmuneRecord *recrod = [arr firstObject];
             succ(recrod);
@@ -166,8 +166,12 @@
     NSDictionary *dict = @{@"data": jsonstring};
     [[APHTTPSession sharedSession] httpGETWithKey:api_key_DogOwnerSaveByJson_action param:dict progress:nil succ:^(id responseObject) {
         
-        if (succ) {
-            succ();
+        APHTTPResult *owner = [APHTTPResult mj_objectWithKeyValues:responseObject];
+        if (owner.success == YES) {
+            if (succ) (succ)();
+        } else {
+            NSError *error = [NSError errorWithDomain:owner.message code:-1 userInfo:nil];
+            if(fail) fail(error);
         }
         
     } fail:^(NSError *error) {
@@ -221,8 +225,12 @@
     NSDictionary *dict = @{@"data": jsonstring};
     [[APHTTPSession sharedSession] httpGETWithKey:api_key_dog_DogOwnerDogSaveByJson_action param:dict progress:nil succ:^(id responseObject) {
         
-        if (succ) {
-            succ();
+        APHTTPResult *owner = [APHTTPResult mj_objectWithKeyValues:responseObject];
+        if (owner.success == YES) {
+            if (succ) (succ)();
+        } else {
+            NSError *error = [NSError errorWithDomain:owner.message code:-1 userInfo:nil];
+            if(fail) fail(error);
         }
         
     } fail:^(NSError *error) {

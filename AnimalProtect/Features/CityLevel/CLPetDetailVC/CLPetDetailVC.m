@@ -39,6 +39,7 @@
 
 @property (nonatomic, strong) CityLevelDataService *dataService;
 @property (nonatomic, strong) CLBaseListDataService *baseListService;
+@property (nonatomic, strong) CLPetDog *dog;
 
 @end
 
@@ -79,6 +80,9 @@
 - (void)initData
 {
     [super initData];
+    
+    self.dog = [[CLPetDog alloc] init];
+    self.dog.ownerNo = self.ownerNo;
     
     [self setNibWithModel:nil];
     
@@ -136,7 +140,7 @@
 
 - (CLPetDog *)getDogFromNib
 {
-    CLPetDog *dog = [[CLPetDog alloc] init];
+    CLPetDog *dog = self.dog;
     dog.dogNo = self.dogIDCell.text;
     dog.looks = self.dogColorCell.text;
     dog.name = self.dogTypeCell.selectObject.NAME;
@@ -179,6 +183,7 @@
 - (void)goToSubmit
 {
     CLPetDog *dog = [self getDogFromNib];
+    
     [self requestSubmitDogInfo:dog];
 }
 
@@ -196,7 +201,8 @@
     [self showHUBText:@"正在加载.."];
     [self.dataService requestPetInfoWithID:dogID succ:^(CLPetDog *dog) {
         [self hiddenHUB];
-        [self setNibWithModel:dog];
+        self.dog = dog;
+        [self setNibWithModel:self.dog];
         
     } fail:^(NSError *error) {
         [self hiddenHUB];
@@ -224,7 +230,10 @@
     [self showHUBText:@"正在提交.."];
     [self.dataService requestSubmitDogInfo:dog succ:^{
         [self hiddenHUB];
-        [self goToReturn];
+       
+        if (self.delegate && [self.delegate respondsToSelector:@selector(clPetDetailVC:didSavePet:)]) {
+            [self.delegate clPetDetailVC:self didSavePet:self.dog];
+        }
         
     } fail:^(NSError *error) {
          [self hiddenHUB];

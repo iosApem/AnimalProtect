@@ -78,9 +78,7 @@
     [self showHUBText:@"正在登录.."];
     [self.loginService loginWithUsers:user succ:^{
         [self hiddenHUB];
-        
-        [APUsers setCurrentUser:user];
-        
+                
         //跳转
         WBWorkBenchVC *workVC = [[WBWorkBenchVC alloc] init];
         MainNavVC *nav = [[MainNavVC alloc] initWithRootViewController:workVC];

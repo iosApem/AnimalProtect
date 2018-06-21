@@ -13,7 +13,7 @@
 #import "CLPetOwnerEditVC.h"
 #import "CLPetListVC.h"
 
-@interface CLPetOwnerAdminVC ()<UITableViewDelegate, UITableViewDataSource>
+@interface CLPetOwnerAdminVC ()<UITableViewDelegate, UITableViewDataSource, CLPetOwnerEditVCDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tb;
 
@@ -89,6 +89,16 @@
     [self goToPetListWithOwnerNo:record.ownerNo];
 }
 
+#pragma mark - CLPetOwnerEditVCDelegate
+
+- (void)clPetOwnerEditVC:(CLPetOwnerEditVC *)clPetOwnerEditVC didSaveOwner:(CLPetOwner *)owner
+{
+    //请求宠物主列表
+    [self requestPetOwnerList];
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 #pragma mark - IBAction
 
 /**
@@ -108,6 +118,7 @@
 {
     CLPetOwnerEditVC *vc = [[CLPetOwnerEditVC alloc] init];
     vc.type = CLPetOwnerEditVCTypeEdit;
+    vc.delegate = self;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -124,7 +135,7 @@
 }
 
 /**
- 请求宠物狗列表
+ 请求宠物主列表
  */
 - (void)requestPetOwnerList
 {

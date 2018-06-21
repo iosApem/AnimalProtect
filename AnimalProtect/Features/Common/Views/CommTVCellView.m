@@ -92,6 +92,9 @@
 
 - (void)textFieldEditingChanged:(UITextField *)textFeild
 {
+    
+    _text = textFeild.text;
+    
     if (self.delegate && [self.delegate respondsToSelector:@selector(commTVCellView:textFeildDidEditingChanged:)]) {
         [self.delegate commTVCellView:self textFeildDidEditingChanged:textFeild.text];
     }

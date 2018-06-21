@@ -70,7 +70,7 @@
     cell.firstTextL.text = record.immuneTime;
     cell.secondTextL.text = record.dogNo;
     cell.thirdTextL.text = record.vaccineQty;
-    cell.thirdTextL.text = record.ownerName;
+    cell.fourthTextL.text = record.ownerName;
     
     return cell;
 }
@@ -81,7 +81,7 @@
     CLImmuneRecord *obj = [self.array objectAtIndex:indexPath.row];
     
     CLPetImmuneDetailEditVC *vc = [[CLPetImmuneDetailEditVC alloc] init];
-    vc.immuneID = obj.immuneNo;
+    vc.immuneID = obj.id;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -125,7 +125,8 @@
  */
 - (void)goToAddImmune
 {
-    
+    CLPetImmuneDetailEditVC *vc = [[CLPetImmuneDetailEditVC alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

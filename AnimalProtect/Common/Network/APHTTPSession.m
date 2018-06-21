@@ -8,6 +8,7 @@
 
 #import "APHTTPSession.h"
 #import "AFNetworking.h"
+#import "MJExtension.h"
 
 @interface APHTTPSession()
 
@@ -24,7 +25,7 @@
         self.session = [AFHTTPSessionManager manager];
         self.session.responseSerializer = [AFHTTPResponseSerializer serializer];
         self.session.requestSerializer = [AFHTTPRequestSerializer serializer];
-        self.session.requestSerializer.timeoutInterval = 5;
+        self.session.requestSerializer.timeoutInterval = 60;
 
         self.baseURL = @"http://183.6.182.162:7070/aedp";
 //        self.baseURL = @"https://www.baidu.com";
@@ -41,6 +42,8 @@
 - (APHTTPRequest *)httpGETWithKey:(NSString *)key param:(NSDictionary *)param progress:(void(^)(NSProgress *prog))progress succ:(void(^)(id responseObject))succ fail:(void(^)(NSError *error))fail
 {
     NSString *url = [NSString stringWithFormat:@"%@/%@", self.baseURL, key ?: @""];
+    NSString *paramStr = [param mj_JSONString];
+    NSLog(@"网络请求:%@ \n参数:%@", url, paramStr);
     
     NSURLSessionDataTask *task = [self.session GET:url parameters:param progress:^(NSProgress * downloadProgress) {
         

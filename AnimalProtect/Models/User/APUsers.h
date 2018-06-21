@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CLPetOwner.h"
 
 //用户类型
 typedef enum {
@@ -18,7 +19,7 @@ typedef enum {
  用户
  @author apem
  */
-@interface APUsers : NSObject
+@interface APUsers : CLPetOwner
 
 @property (nonatomic, strong) NSString *UserID;
 @property (nonatomic, strong) NSString *UserName;

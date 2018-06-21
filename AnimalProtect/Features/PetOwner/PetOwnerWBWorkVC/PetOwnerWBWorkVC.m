@@ -41,20 +41,23 @@
 
 - (void)topImgTitleViewDidTap:(TopImgTitleView *)topImgTitleView
 {
+    APUsers *users = [APUsers currentUser];
     //个人信息
     if (topImgTitleView == self.personInfoV) {
         CLPetOwnerEditVC *vc = [[CLPetOwnerEditVC alloc] init];
-        APUsers *users = [APUsers currentUser];
-        vc.petOwnerID = users.UserID;
+        
+        vc.petOwnerID = users.id;
         vc.type = CLPetOwnerEditVCTypeSee;
         [self.navigationController pushViewController:vc animated:YES];
     //犬信息
     } else if (topImgTitleView == self.dogInfoV) {
         CLPetListVC *vc = [[CLPetListVC alloc] init];
+        vc.ownerNo = users.ownerNo;
         [self.navigationController pushViewController:vc animated:YES];
     //免疫记录
     } else if (topImgTitleView == self.protectRecordV) {
         CLPetImmuneListVC *vc = [[CLPetImmuneListVC alloc] init];
+        vc.ownerNo = users.ownerNo;
         [self.navigationController pushViewController:vc animated:YES];
 
     //最新实事

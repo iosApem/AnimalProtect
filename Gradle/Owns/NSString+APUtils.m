@@ -21,4 +21,14 @@
     return flag;
 }
 
++ (NSString *)datetimeStrWithDate:(NSDate *)date
+{
+    NSString *format = @"yyyy-MM-dd HH:mm:ss";
+    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
+    fmt.dateFormat = format;
+    NSString *datetimeStr = [fmt stringFromDate:date];
+    
+    return datetimeStr;
+}
+
 @end

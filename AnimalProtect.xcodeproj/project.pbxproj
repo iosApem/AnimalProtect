@@ -87,6 +87,18 @@
 		1818DC7320A4944100EC9F8C /* CLPetImmuneDetailEditVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1818DC6F20A4944100EC9F8C /* CLPetImmuneDetailEditVC.xib */; };
 		183FA5AA20A714FB00965BAE /* icon_tuichu.png in Resources */ = {isa = PBXBuildFile; fileRef = 183FA5A920A714FB00965BAE /* icon_tuichu.png */; };
 		183FA5AB20A714FB00965BAE /* icon_tuichu.png in Resources */ = {isa = PBXBuildFile; fileRef = 183FA5A920A714FB00965BAE /* icon_tuichu.png */; };
+		18754EEF20DAAC5800093F7B /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 18754ED220DAAC5800093F7B /* XMLDictionary.m */; };
+		18754EF020DAAC5800093F7B /* NSString+APBeanParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 18754ED520DAAC5800093F7B /* NSString+APBeanParse.m */; };
+		18754EF120DAAC5800093F7B /* HBFormatErrorDearler.m in Sources */ = {isa = PBXBuildFile; fileRef = 18754ED720DAAC5800093F7B /* HBFormatErrorDearler.m */; };
+		18754EF220DAAC5800093F7B /* NSDictionary+APBeanParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 18754ED920DAAC5800093F7B /* NSDictionary+APBeanParse.m */; };
+		18754EF320DAAC5800093F7B /* NSObject+APBeanParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 18754EDA20DAAC5800093F7B /* NSObject+APBeanParse.m */; };
+		18754EF420DAAC5800093F7B /* Hbb_JSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 18754EDB20DAAC5800093F7B /* Hbb_JSONParser.m */; };
+		18754EF520DAAC5800093F7B /* Hbb_XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 18754EDD20DAAC5800093F7B /* Hbb_XMLParser.m */; };
+		18754EF620DAAC5800093F7B /* NSArray+APBeanParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 18754EE320DAAC5800093F7B /* NSArray+APBeanParse.m */; };
+		18754EF720DAAC5800093F7B /* APBeanParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 18754EE620DAAC5800093F7B /* APBeanParser.m */; };
+		18754EF820DAAC5800093F7B /* NSArray+DateString.m in Sources */ = {isa = PBXBuildFile; fileRef = 18754EE820DAAC5800093F7B /* NSArray+DateString.m */; };
+		18754EF920DAAC5800093F7B /* NSDictionary+DateString.m in Sources */ = {isa = PBXBuildFile; fileRef = 18754EE920DAAC5800093F7B /* NSDictionary+DateString.m */; };
+		18754EFA20DAAC5800093F7B /* TypeAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 18754EEB20DAAC5800093F7B /* TypeAdapter.m */; };
 		1876CFBB20BC2F4000B5E9A5 /* CLPetDog.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876CFB520BC2F4000B5E9A5 /* CLPetDog.m */; };
 		1876CFBC20BC2F4000B5E9A5 /* CLPetDog.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876CFB520BC2F4000B5E9A5 /* CLPetDog.m */; };
 		1876CFBD20BC2F4000B5E9A5 /* CLPetDogAttach.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876CFB720BC2F4000B5E9A5 /* CLPetDogAttach.m */; };
@@ -310,22 +322,6 @@
 		18EA5BCA20ADBB1C0060EC9D /* APHTTPSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EA5BC820ADBB1C0060EC9D /* APHTTPSession.m */; };
 		18EA5BCD20ADBB440060EC9D /* APHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EA5BCC20ADBB440060EC9D /* APHTTPRequest.m */; };
 		18EA5BCE20ADBB440060EC9D /* APHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EA5BCC20ADBB440060EC9D /* APHTTPRequest.m */; };
-		18EA5BF520ADD60F0060EC9D /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EA5BE020ADD60F0060EC9D /* JSONValueTransformer.m */; };
-		18EA5BF620ADD60F0060EC9D /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EA5BE020ADD60F0060EC9D /* JSONValueTransformer.m */; };
-		18EA5BF720ADD60F0060EC9D /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EA5BE320ADD60F0060EC9D /* JSONKeyMapper.m */; };
-		18EA5BF820ADD60F0060EC9D /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EA5BE320ADD60F0060EC9D /* JSONKeyMapper.m */; };
-		18EA5BF920ADD60F0060EC9D /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EA5BE520ADD60F0060EC9D /* JSONModel.m */; };
-		18EA5BFA20ADD60F0060EC9D /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EA5BE520ADD60F0060EC9D /* JSONModel.m */; };
-		18EA5BFB20ADD60F0060EC9D /* JSONModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EA5BE620ADD60F0060EC9D /* JSONModelError.m */; };
-		18EA5BFC20ADD60F0060EC9D /* JSONModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EA5BE620ADD60F0060EC9D /* JSONModelError.m */; };
-		18EA5BFD20ADD60F0060EC9D /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EA5BE920ADD60F0060EC9D /* JSONModelClassProperty.m */; };
-		18EA5BFE20ADD60F0060EC9D /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EA5BE920ADD60F0060EC9D /* JSONModelClassProperty.m */; };
-		18EA5C0120ADD60F0060EC9D /* JSONHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EA5BEF20ADD60F0060EC9D /* JSONHTTPClient.m */; };
-		18EA5C0220ADD60F0060EC9D /* JSONHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EA5BEF20ADD60F0060EC9D /* JSONHTTPClient.m */; };
-		18EA5C0320ADD60F0060EC9D /* JSONAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EA5BF020ADD60F0060EC9D /* JSONAPI.m */; };
-		18EA5C0420ADD60F0060EC9D /* JSONAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EA5BF020ADD60F0060EC9D /* JSONAPI.m */; };
-		18EA5C0520ADD60F0060EC9D /* JSONModel+networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EA5BF420ADD60F0060EC9D /* JSONModel+networking.m */; };
-		18EA5C0620ADD60F0060EC9D /* JSONModel+networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EA5BF420ADD60F0060EC9D /* JSONModel+networking.m */; };
 		18EA5C0920B2FA7F0060EC9D /* NSString+APUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EA5C0820B2FA7F0060EC9D /* NSString+APUtils.m */; };
 		18EA5C0A20B2FA7F0060EC9D /* NSString+APUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EA5C0820B2FA7F0060EC9D /* NSString+APUtils.m */; };
 		18EA5C0D20B2FDE70060EC9D /* APHTTPResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EA5C0C20B2FDE70060EC9D /* APHTTPResult.m */; };
@@ -426,6 +422,31 @@
 		1818DC6E20A4944100EC9F8C /* CLPetImmuneDetailEditVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLPetImmuneDetailEditVC.m; sourceTree = "<group>"; };
 		1818DC6F20A4944100EC9F8C /* CLPetImmuneDetailEditVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CLPetImmuneDetailEditVC.xib; sourceTree = "<group>"; };
 		183FA5A920A714FB00965BAE /* icon_tuichu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_tuichu.png; sourceTree = "<group>"; };
+		18754ED120DAAC5800093F7B /* XMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDictionary.h; sourceTree = "<group>"; };
+		18754ED220DAAC5800093F7B /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
+		18754ED420DAAC5800093F7B /* Hbb_JSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hbb_JSONParser.h; sourceTree = "<group>"; };
+		18754ED520DAAC5800093F7B /* NSString+APBeanParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+APBeanParse.m"; sourceTree = "<group>"; };
+		18754ED620DAAC5800093F7B /* Hbb_XMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hbb_XMLParser.h; sourceTree = "<group>"; };
+		18754ED720DAAC5800093F7B /* HBFormatErrorDearler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBFormatErrorDearler.m; sourceTree = "<group>"; };
+		18754ED820DAAC5800093F7B /* Hbb_DataFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hbb_DataFormat.h; sourceTree = "<group>"; };
+		18754ED920DAAC5800093F7B /* NSDictionary+APBeanParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+APBeanParse.m"; sourceTree = "<group>"; };
+		18754EDA20DAAC5800093F7B /* NSObject+APBeanParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+APBeanParse.m"; sourceTree = "<group>"; };
+		18754EDB20DAAC5800093F7B /* Hbb_JSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hbb_JSONParser.m; sourceTree = "<group>"; };
+		18754EDC20DAAC5800093F7B /* HBFormatErrorDearler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBFormatErrorDearler.h; sourceTree = "<group>"; };
+		18754EDD20DAAC5800093F7B /* Hbb_XMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hbb_XMLParser.m; sourceTree = "<group>"; };
+		18754EDE20DAAC5800093F7B /* NSString+APBeanParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+APBeanParse.h"; sourceTree = "<group>"; };
+		18754EDF20DAAC5800093F7B /* NSObject+APBeanParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+APBeanParse.h"; sourceTree = "<group>"; };
+		18754EE020DAAC5800093F7B /* NSDictionary+APBeanParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+APBeanParse.h"; sourceTree = "<group>"; };
+		18754EE220DAAC5800093F7B /* APBeanParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APBeanParser.h; sourceTree = "<group>"; };
+		18754EE320DAAC5800093F7B /* NSArray+APBeanParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+APBeanParse.m"; sourceTree = "<group>"; };
+		18754EE420DAAC5800093F7B /* NSDictionary+DateString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+DateString.h"; sourceTree = "<group>"; };
+		18754EE520DAAC5800093F7B /* NSArray+DateString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+DateString.h"; sourceTree = "<group>"; };
+		18754EE620DAAC5800093F7B /* APBeanParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APBeanParser.m; sourceTree = "<group>"; };
+		18754EE720DAAC5800093F7B /* NSArray+APBeanParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+APBeanParse.h"; sourceTree = "<group>"; };
+		18754EE820DAAC5800093F7B /* NSArray+DateString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+DateString.m"; sourceTree = "<group>"; };
+		18754EE920DAAC5800093F7B /* NSDictionary+DateString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+DateString.m"; sourceTree = "<group>"; };
+		18754EEB20DAAC5800093F7B /* TypeAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypeAdapter.m; sourceTree = "<group>"; };
+		18754EEC20DAAC5800093F7B /* TypeAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeAdapter.h; sourceTree = "<group>"; };
 		1876CFB520BC2F4000B5E9A5 /* CLPetDog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLPetDog.m; sourceTree = "<group>"; };
 		1876CFB620BC2F4000B5E9A5 /* CLPetDogAttach.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLPetDogAttach.h; sourceTree = "<group>"; };
 		1876CFB720BC2F4000B5E9A5 /* CLPetDogAttach.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLPetDogAttach.m; sourceTree = "<group>"; };
@@ -656,23 +677,6 @@
 		18EA5BCB20ADBB440060EC9D /* APHTTPRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APHTTPRequest.h; sourceTree = "<group>"; };
 		18EA5BCC20ADBB440060EC9D /* APHTTPRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APHTTPRequest.m; sourceTree = "<group>"; };
 		18EA5BDD20ADD55D0060EC9D /* APAPIConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APAPIConstants.h; sourceTree = "<group>"; };
-		18EA5BE020ADD60F0060EC9D /* JSONValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONValueTransformer.m; sourceTree = "<group>"; };
-		18EA5BE120ADD60F0060EC9D /* JSONKeyMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKeyMapper.h; sourceTree = "<group>"; };
-		18EA5BE220ADD60F0060EC9D /* JSONValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONValueTransformer.h; sourceTree = "<group>"; };
-		18EA5BE320ADD60F0060EC9D /* JSONKeyMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKeyMapper.m; sourceTree = "<group>"; };
-		18EA5BE520ADD60F0060EC9D /* JSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModel.m; sourceTree = "<group>"; };
-		18EA5BE620ADD60F0060EC9D /* JSONModelError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelError.m; sourceTree = "<group>"; };
-		18EA5BE720ADD60F0060EC9D /* JSONModelClassProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelClassProperty.h; sourceTree = "<group>"; };
-		18EA5BE820ADD60F0060EC9D /* JSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModel.h; sourceTree = "<group>"; };
-		18EA5BE920ADD60F0060EC9D /* JSONModelClassProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelClassProperty.m; sourceTree = "<group>"; };
-		18EA5BEA20ADD60F0060EC9D /* JSONModelError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelError.h; sourceTree = "<group>"; };
-		18EA5BED20ADD60F0060EC9D /* JSONModelLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelLib.h; sourceTree = "<group>"; };
-		18EA5BEF20ADD60F0060EC9D /* JSONHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONHTTPClient.m; sourceTree = "<group>"; };
-		18EA5BF020ADD60F0060EC9D /* JSONAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONAPI.m; sourceTree = "<group>"; };
-		18EA5BF120ADD60F0060EC9D /* JSONModel+networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSONModel+networking.h"; sourceTree = "<group>"; };
-		18EA5BF220ADD60F0060EC9D /* JSONHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONHTTPClient.h; sourceTree = "<group>"; };
-		18EA5BF320ADD60F0060EC9D /* JSONAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONAPI.h; sourceTree = "<group>"; };
-		18EA5BF420ADD60F0060EC9D /* JSONModel+networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSONModel+networking.m"; sourceTree = "<group>"; };
 		18EA5C0720B2FA7F0060EC9D /* NSString+APUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+APUtils.h"; sourceTree = "<group>"; };
 		18EA5C0820B2FA7F0060EC9D /* NSString+APUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+APUtils.m"; sourceTree = "<group>"; };
 		18EA5C0B20B2FDE70060EC9D /* APHTTPResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APHTTPResult.h; sourceTree = "<group>"; };
@@ -895,6 +899,78 @@
 				1818DC6F20A4944100EC9F8C /* CLPetImmuneDetailEditVC.xib */,
 			);
 			path = CLPetImmuneDetailEditVC;
+			sourceTree = "<group>";
+		};
+		18754ECE20DAAC5800093F7B /* Hbb_DataFormatFramework */ = {
+			isa = PBXGroup;
+			children = (
+				18754ECF20DAAC5800093F7B /* HBB_DataFormat */,
+			);
+			path = Hbb_DataFormatFramework;
+			sourceTree = "<group>";
+		};
+		18754ECF20DAAC5800093F7B /* HBB_DataFormat */ = {
+			isa = PBXGroup;
+			children = (
+				18754ED020DAAC5800093F7B /* XMLDictionary */,
+				18754ED320DAAC5800093F7B /* Public */,
+				18754EE120DAAC5800093F7B /* BeanParser */,
+				18754EEA20DAAC5800093F7B /* TypeAdapter */,
+			);
+			path = HBB_DataFormat;
+			sourceTree = "<group>";
+		};
+		18754ED020DAAC5800093F7B /* XMLDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				18754ED120DAAC5800093F7B /* XMLDictionary.h */,
+				18754ED220DAAC5800093F7B /* XMLDictionary.m */,
+			);
+			path = XMLDictionary;
+			sourceTree = "<group>";
+		};
+		18754ED320DAAC5800093F7B /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				18754ED420DAAC5800093F7B /* Hbb_JSONParser.h */,
+				18754ED520DAAC5800093F7B /* NSString+APBeanParse.m */,
+				18754ED620DAAC5800093F7B /* Hbb_XMLParser.h */,
+				18754ED720DAAC5800093F7B /* HBFormatErrorDearler.m */,
+				18754ED820DAAC5800093F7B /* Hbb_DataFormat.h */,
+				18754ED920DAAC5800093F7B /* NSDictionary+APBeanParse.m */,
+				18754EDA20DAAC5800093F7B /* NSObject+APBeanParse.m */,
+				18754EDB20DAAC5800093F7B /* Hbb_JSONParser.m */,
+				18754EDC20DAAC5800093F7B /* HBFormatErrorDearler.h */,
+				18754EDD20DAAC5800093F7B /* Hbb_XMLParser.m */,
+				18754EDE20DAAC5800093F7B /* NSString+APBeanParse.h */,
+				18754EDF20DAAC5800093F7B /* NSObject+APBeanParse.h */,
+				18754EE020DAAC5800093F7B /* NSDictionary+APBeanParse.h */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		18754EE120DAAC5800093F7B /* BeanParser */ = {
+			isa = PBXGroup;
+			children = (
+				18754EE220DAAC5800093F7B /* APBeanParser.h */,
+				18754EE320DAAC5800093F7B /* NSArray+APBeanParse.m */,
+				18754EE420DAAC5800093F7B /* NSDictionary+DateString.h */,
+				18754EE520DAAC5800093F7B /* NSArray+DateString.h */,
+				18754EE620DAAC5800093F7B /* APBeanParser.m */,
+				18754EE720DAAC5800093F7B /* NSArray+APBeanParse.h */,
+				18754EE820DAAC5800093F7B /* NSArray+DateString.m */,
+				18754EE920DAAC5800093F7B /* NSDictionary+DateString.m */,
+			);
+			path = BeanParser;
+			sourceTree = "<group>";
+		};
+		18754EEA20DAAC5800093F7B /* TypeAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				18754EEB20DAAC5800093F7B /* TypeAdapter.m */,
+				18754EEC20DAAC5800093F7B /* TypeAdapter.h */,
+			);
+			path = TypeAdapter;
 			sourceTree = "<group>";
 		};
 		1876CFC120BC33A700B5E9A5 /* CLPetOwnerEditVC */ = {
@@ -1257,9 +1333,9 @@
 		18EA588F20A72F6E0060EC9D /* Venders */ = {
 			isa = PBXGroup;
 			children = (
+				18754ECE20DAAC5800093F7B /* Hbb_DataFormatFramework */,
 				18EA5C2420B709A00060EC9D /* MJExtension */,
 				18EA5C0F20B303950060EC9D /* LoadingHUD */,
-				18EA5BDE20ADD60F0060EC9D /* JSONModel */,
 				18EA5B7D20ADBA830060EC9D /* AFNetworking */,
 				18EA598420A7EAE50060EC9D /* TPKeyboardAvoiding */,
 				18EA58B820A72F910060EC9D /* HXWeiboPhotoPicker */,
@@ -1462,54 +1538,6 @@
 				18EA5C0820B2FA7F0060EC9D /* NSString+APUtils.m */,
 			);
 			path = Owns;
-			sourceTree = "<group>";
-		};
-		18EA5BDE20ADD60F0060EC9D /* JSONModel */ = {
-			isa = PBXGroup;
-			children = (
-				18EA5BDF20ADD60F0060EC9D /* JSONModelTransformations */,
-				18EA5BE420ADD60F0060EC9D /* JSONModel */,
-				18EA5BED20ADD60F0060EC9D /* JSONModelLib.h */,
-				18EA5BEE20ADD60F0060EC9D /* JSONModelNetworking */,
-			);
-			path = JSONModel;
-			sourceTree = "<group>";
-		};
-		18EA5BDF20ADD60F0060EC9D /* JSONModelTransformations */ = {
-			isa = PBXGroup;
-			children = (
-				18EA5BE020ADD60F0060EC9D /* JSONValueTransformer.m */,
-				18EA5BE120ADD60F0060EC9D /* JSONKeyMapper.h */,
-				18EA5BE220ADD60F0060EC9D /* JSONValueTransformer.h */,
-				18EA5BE320ADD60F0060EC9D /* JSONKeyMapper.m */,
-			);
-			path = JSONModelTransformations;
-			sourceTree = "<group>";
-		};
-		18EA5BE420ADD60F0060EC9D /* JSONModel */ = {
-			isa = PBXGroup;
-			children = (
-				18EA5BE520ADD60F0060EC9D /* JSONModel.m */,
-				18EA5BE620ADD60F0060EC9D /* JSONModelError.m */,
-				18EA5BE720ADD60F0060EC9D /* JSONModelClassProperty.h */,
-				18EA5BE820ADD60F0060EC9D /* JSONModel.h */,
-				18EA5BE920ADD60F0060EC9D /* JSONModelClassProperty.m */,
-				18EA5BEA20ADD60F0060EC9D /* JSONModelError.h */,
-			);
-			path = JSONModel;
-			sourceTree = "<group>";
-		};
-		18EA5BEE20ADD60F0060EC9D /* JSONModelNetworking */ = {
-			isa = PBXGroup;
-			children = (
-				18EA5BEF20ADD60F0060EC9D /* JSONHTTPClient.m */,
-				18EA5BF020ADD60F0060EC9D /* JSONAPI.m */,
-				18EA5BF120ADD60F0060EC9D /* JSONModel+networking.h */,
-				18EA5BF220ADD60F0060EC9D /* JSONHTTPClient.h */,
-				18EA5BF320ADD60F0060EC9D /* JSONAPI.h */,
-				18EA5BF420ADD60F0060EC9D /* JSONModel+networking.m */,
-			);
-			path = JSONModelNetworking;
 			sourceTree = "<group>";
 		};
 		18EA5C0F20B303950060EC9D /* LoadingHUD */ = {
@@ -1730,10 +1758,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1818603F20A5F13400B81082 /* RLCityLevelLoginVC.m in Sources */,
+				18754EF720DAAC5800093F7B /* APBeanParser.m in Sources */,
 				18EA5C0D20B2FDE70060EC9D /* APHTTPResult.m in Sources */,
 				188C8CF820A1DA6B00C9867A /* APNormalLabel.m in Sources */,
 				1818601F20A5E7F100B81082 /* CityLevelWBWorkVC.m in Sources */,
 				18EA595620A72F910060EC9D /* HXCustomCameraController.m in Sources */,
+				18754EF420DAAC5800093F7B /* Hbb_JSONParser.m in Sources */,
 				18EA596020A72F910060EC9D /* HXFullScreenCameraPlayView.m in Sources */,
 				18EA591C20A72F910060EC9D /* SDWebImageDownloaderOperation.m in Sources */,
 				18EA597A20A7CE040060EC9D /* CLPetOwner.m in Sources */,
@@ -1748,9 +1778,7 @@
 				1818603720A5ED9E00B81082 /* CLPetOwnerCheckListVC.m in Sources */,
 				18EA597220A72F910060EC9D /* HXDateVideoEditViewController.m in Sources */,
 				188C8E9920A33D6300C9867A /* PetOwnerDataService.m in Sources */,
-				18EA5BF520ADD60F0060EC9D /* JSONValueTransformer.m in Sources */,
 				18EA5BBE20ADBA900060EC9D /* AFURLSessionManager.m in Sources */,
-				18EA5BFD20ADD60F0060EC9D /* JSONModelClassProperty.m in Sources */,
 				18EA590C20A72F910060EC9D /* SDWebImageDecoder.m in Sources */,
 				18EA593620A72F910060EC9D /* HXDatePhotoPreviewBottomView.m in Sources */,
 				18EA5BC220ADBA900060EC9D /* AFNetworkReachabilityManager.m in Sources */,
@@ -1761,6 +1789,7 @@
 				188C8CDA20A0B66A00C9867A /* RLLoginService.m in Sources */,
 				18EA596C20A72F910060EC9D /* UIButton+HXExtension.m in Sources */,
 				18EA5C3D20B709A10060EC9D /* NSObject+MJKeyValue.m in Sources */,
+				18754EF520DAAC5800093F7B /* Hbb_XMLParser.m in Sources */,
 				18EA593C20A72F910060EC9D /* UIImageView+HXExtension.m in Sources */,
 				188C88DE20A07F0E00C9867A /* ViewController.m in Sources */,
 				18EA593020A72F910060EC9D /* HXPhotoConfiguration.m in Sources */,
@@ -1774,15 +1803,18 @@
 				18EA594220A72F910060EC9D /* HXPhotoModel.m in Sources */,
 				18EA5C4520B709A10060EC9D /* NSObject+MJProperty.m in Sources */,
 				188C8E5920A1E4EB00C9867A /* Toast+UIView.m in Sources */,
+				18754EF620DAAC5800093F7B /* NSArray+APBeanParse.m in Sources */,
 				18EA5C0920B2FA7F0060EC9D /* NSString+APUtils.m in Sources */,
 				18EA592420A72F910060EC9D /* SDImageCacheConfig.m in Sources */,
 				1876CFD320BD8E5E00B5E9A5 /* CLOrg.m in Sources */,
+				18754EF920DAAC5800093F7B /* NSDictionary+DateString.m in Sources */,
 				1876CFCB20BD850700B5E9A5 /* CLBaseListDataService.m in Sources */,
 				18EA5BBC20ADBA900060EC9D /* AFHTTPSessionManager.m in Sources */,
 				1818DC2F20A47D4500EC9F8C /* NewsListVC.m in Sources */,
 				18EA595020A72F910060EC9D /* HXDatePhotoViewController.m in Sources */,
 				1818DC6020A489A800EC9F8C /* FourDescCell.m in Sources */,
-				18EA5BFB20ADD60F0060EC9D /* JSONModelError.m in Sources */,
+				18754EF220DAAC5800093F7B /* NSDictionary+APBeanParse.m in Sources */,
+				18754EF020DAAC5800093F7B /* NSString+APBeanParse.m in Sources */,
 				18EA5C4920B709A10060EC9D /* NSString+MJExtension.m in Sources */,
 				1818604520A5F38900B81082 /* TimerTool.m in Sources */,
 				18EA596820A72F910060EC9D /* HXPhotoSubViewCell.m in Sources */,
@@ -1799,17 +1831,15 @@
 				188C8CF420A1DA6B00C9867A /* TopImgTitleView.m in Sources */,
 				18EA596620A72F910060EC9D /* HXDatePhotoViewTransition.m in Sources */,
 				18EA598F20A7EAE50060EC9D /* TPKeyboardAvoidingTableView.m in Sources */,
-				18EA5BF720ADD60F0060EC9D /* JSONKeyMapper.m in Sources */,
 				1876CFE420BD9E7300B5E9A5 /* CommSelectVCCell.m in Sources */,
 				18EA5C1420B303950060EC9D /* LSYActivityIndicator.m in Sources */,
-				18EA5C0520ADD60F0060EC9D /* JSONModel+networking.m in Sources */,
 				18EA5C2020B6F8C30060EC9D /* CLPetOwnerCheckDetailVC.m in Sources */,
 				188C8D0020A1DA6B00C9867A /* CommTVCellView.m in Sources */,
 				18EA596420A72F910060EC9D /* HXCustomNavigationController.m in Sources */,
 				188C8CCE20A0AC1400C9867A /* APRoundTF.m in Sources */,
-				18EA5C0120ADD60F0060EC9D /* JSONHTTPClient.m in Sources */,
 				18EA592020A72F910060EC9D /* UIImageView+WebCache.m in Sources */,
 				188C8BBD20A097EA00C9867A /* RLPetOwnerLoginVC.m in Sources */,
+				18754EF820DAAC5800093F7B /* NSArray+DateString.m in Sources */,
 				18EA591220A72F910060EC9D /* UIImage+GIF.m in Sources */,
 				18EA588D20A72A1D0060EC9D /* NineSpaceImagesView.m in Sources */,
 				18EA591420A72F910060EC9D /* UIImage+MultiFormat.m in Sources */,
@@ -1817,7 +1847,7 @@
 				1876CFF420BEF0C500B5E9A5 /* CLPetListVC.m in Sources */,
 				1818DC3A20A47E9C00EC9F8C /* NewsCell.m in Sources */,
 				18EA593820A72F910060EC9D /* NSBundle+HXWeiboPhotoPicker.m in Sources */,
-				18EA5C0320ADD60F0060EC9D /* JSONAPI.m in Sources */,
+				18754EF320DAAC5800093F7B /* NSObject+APBeanParse.m in Sources */,
 				18EA591620A72F910060EC9D /* SDWebImageCompat.m in Sources */,
 				18EA595220A72F910060EC9D /* HXPhotoManager.m in Sources */,
 				18EA592A20A72F910060EC9D /* UIButton+WebCache.m in Sources */,
@@ -1826,12 +1856,14 @@
 				18EA5C4320B709A10060EC9D /* MJExtensionConst.m in Sources */,
 				1876CFBD20BC2F4000B5E9A5 /* CLPetDogAttach.m in Sources */,
 				1876CFD720BD947B00B5E9A5 /* CommTFSelectObject.m in Sources */,
+				18754EF120DAAC5800093F7B /* HBFormatErrorDearler.m in Sources */,
 				18EA594C20A72F910060EC9D /* HXDatePhotoPreviewViewController.m in Sources */,
 				188C8BB820A097A900C9867A /* APBaseVC.m in Sources */,
 				18EA593E20A72F910060EC9D /* UIFont+HXExtension.m in Sources */,
 				18EA5BCD20ADBB440060EC9D /* APHTTPRequest.m in Sources */,
 				18EA599120A7EAE50060EC9D /* TPKeyboardAvoidingScrollView.m in Sources */,
 				188C8CFE20A1DA6B00C9867A /* HWDownSelectedView.m in Sources */,
+				18754EFA20DAAC5800093F7B /* TypeAdapter.m in Sources */,
 				18EA596E20A72F910060EC9D /* HXCustomPreviewView.m in Sources */,
 				188C8CD220A0B51D00C9867A /* APUsers.m in Sources */,
 				18EA5BC020ADBA900060EC9D /* AFURLRequestSerialization.m in Sources */,
@@ -1846,6 +1878,7 @@
 				18EA591820A72F910060EC9D /* SDWebImagePrefetcher.m in Sources */,
 				18EA594E20A72F910060EC9D /* HXDatePhotoViewFlowLayout.m in Sources */,
 				18EA5C4720B709A10060EC9D /* NSObject+MJClass.m in Sources */,
+				18754EEF20DAAC5800093F7B /* XMLDictionary.m in Sources */,
 				188C88E920A07F0E00C9867A /* main.m in Sources */,
 				18EA5C4B20B709A10060EC9D /* MJPropertyKey.m in Sources */,
 				18EA5C3F20B709A10060EC9D /* MJProperty.m in Sources */,
@@ -1860,7 +1893,6 @@
 				1818601720A5E7A600B81082 /* PetOwnerWBWorkVC.m in Sources */,
 				18EA590820A72F910060EC9D /* MKAnnotationView+WebCache.m in Sources */,
 				18EA591020A72F910060EC9D /* SDWebImageDownloader.m in Sources */,
-				18EA5BF920ADD60F0060EC9D /* JSONModel.m in Sources */,
 				18EA5C1620B303950060EC9D /* LSYLoadingHUD.m in Sources */,
 				1818DC4220A4813700EC9F8C /* NewsDetailVC.m in Sources */,
 				18EA597620A72F910060EC9D /* HXDatePhotoEditViewController.m in Sources */,
@@ -1883,13 +1915,11 @@
 				188C8CDB20A0B66A00C9867A /* RLLoginService.m in Sources */,
 				1818603120A5ED7A00B81082 /* CLPetOwnerAdminVC.m in Sources */,
 				1876CFBE20BC2F4000B5E9A5 /* CLPetDogAttach.m in Sources */,
-				18EA5BF820ADD60F0060EC9D /* JSONKeyMapper.m in Sources */,
 				1876CFC820BC33A700B5E9A5 /* CLPetOwnerEditVC.m in Sources */,
 				18EA596120A72F910060EC9D /* HXFullScreenCameraPlayView.m in Sources */,
 				1876CFD420BD8E5E00B5E9A5 /* CLOrg.m in Sources */,
 				18185FB320A5C69800B81082 /* APRoundTFView.m in Sources */,
 				18EA5C4420B709A10060EC9D /* MJExtensionConst.m in Sources */,
-				18EA5C0420ADD60F0060EC9D /* JSONAPI.m in Sources */,
 				18EA595B20A72F910060EC9D /* HXCustomCollectionReusableView.m in Sources */,
 				18EA5C2120B6F8C30060EC9D /* CLPetOwnerCheckDetailVC.m in Sources */,
 				1818DC6620A48EEB00EC9F8C /* CityLevelDataService.m in Sources */,
@@ -1913,7 +1943,6 @@
 				1818DC3020A47D4500EC9F8C /* NewsListVC.m in Sources */,
 				1818604A20A5FDC000B81082 /* UIImage+HpUtil.m in Sources */,
 				18EA5C4820B709A10060EC9D /* NSObject+MJClass.m in Sources */,
-				18EA5BFE20ADD60F0060EC9D /* JSONModelClassProperty.m in Sources */,
 				18EA594920A72F910060EC9D /* HXPhotoCustomNavigationBar.m in Sources */,
 				18EA591F20A72F910060EC9D /* NSData+ImageContentType.m in Sources */,
 				18EA591720A72F910060EC9D /* SDWebImageCompat.m in Sources */,
@@ -1925,7 +1954,6 @@
 				18EA590F20A72F910060EC9D /* UIImageView+HighlightedWebCache.m in Sources */,
 				1818601820A5E7A600B81082 /* PetOwnerWBWorkVC.m in Sources */,
 				18EA595520A72F910060EC9D /* HXDatePhotoViewPresentTransition.m in Sources */,
-				18EA5C0620ADD60F0060EC9D /* JSONModel+networking.m in Sources */,
 				18EA593720A72F910060EC9D /* HXDatePhotoPreviewBottomView.m in Sources */,
 				188C8E5F20A1E62A00C9867A /* MainNavVC.m in Sources */,
 				1876CFD020BD8E3C00B5E9A5 /* CLSysDict.m in Sources */,
@@ -1960,7 +1988,6 @@
 				18EA594B20A72F910060EC9D /* HXPhotoTools.m in Sources */,
 				188C8CFF20A1DA6B00C9867A /* HWDownSelectedView.m in Sources */,
 				18EA594320A72F910060EC9D /* HXPhotoModel.m in Sources */,
-				18EA5BF620ADD60F0060EC9D /* JSONValueTransformer.m in Sources */,
 				18EA588920A71AA50060EC9D /* CommTFSelectView.m in Sources */,
 				18185FF920A5DBD900B81082 /* HbbUIStyleCenter.m in Sources */,
 				188C8CCF20A0AC1400C9867A /* APRoundTF.m in Sources */,
@@ -1969,7 +1996,6 @@
 				18EA5BC520ADBA900060EC9D /* AFSecurityPolicy.m in Sources */,
 				18EA599220A7EAE50060EC9D /* TPKeyboardAvoidingScrollView.m in Sources */,
 				18EA592920A72F910060EC9D /* UIView+WebCache.m in Sources */,
-				18EA5BFC20ADD60F0060EC9D /* JSONModelError.m in Sources */,
 				18EA591B20A72F910060EC9D /* SDImageCache.m in Sources */,
 				1876CFE520BD9E7300B5E9A5 /* CommSelectVCCell.m in Sources */,
 				18EA599020A7EAE50060EC9D /* TPKeyboardAvoidingTableView.m in Sources */,
@@ -1981,7 +2007,6 @@
 				1818DC4C20A487ED00EC9F8C /* CLPetImmuneListVC.m in Sources */,
 				18EA596720A72F910060EC9D /* HXDatePhotoViewTransition.m in Sources */,
 				18EA595720A72F910060EC9D /* HXCustomCameraController.m in Sources */,
-				18EA5BFA20ADD60F0060EC9D /* JSONModel.m in Sources */,
 				188C8BB920A097A900C9867A /* APBaseVC.m in Sources */,
 				18EA592D20A72F910060EC9D /* HXCustomCameraViewController.m in Sources */,
 				18EA5BC120ADBA900060EC9D /* AFURLRequestSerialization.m in Sources */,
@@ -1993,7 +2018,6 @@
 				188C8CD320A0B51D00C9867A /* APUsers.m in Sources */,
 				1818DC7120A4944100EC9F8C /* CLPetImmuneDetailEditVC.m in Sources */,
 				18EA5C3C20B709A10060EC9D /* MJPropertyType.m in Sources */,
-				18EA5C0220ADD60F0060EC9D /* JSONHTTPClient.m in Sources */,
 				1818603820A5ED9E00B81082 /* CLPetOwnerCheckListVC.m in Sources */,
 				1876CFF520BEF0C500B5E9A5 /* CLPetListVC.m in Sources */,
 				18EA5C4C20B709A10060EC9D /* MJPropertyKey.m in Sources */,

@@ -12,7 +12,7 @@
 #import "FourDescCell.h"
 #import "CLPetDetailVC.h"
 
-@interface CLPetListVC ()<UITableViewDelegate, UITableViewDataSource>
+@interface CLPetListVC ()<UITableViewDelegate, UITableViewDataSource, CLPetDetailVCDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tb;
 
@@ -82,6 +82,7 @@
     
     CLPetDetailVC *petDetailVC = [[CLPetDetailVC alloc] init];
     petDetailVC.dogID = dog.id;
+    petDetailVC.delegate = self;
     [self.navigationController pushViewController:petDetailVC animated:YES];
 }
 
@@ -90,6 +91,13 @@
     return 88;
 }
 
+#pragma mark - CLPetDetailVCDelegate
+
+- (void)clPetDetailVC:(CLPetDetailVC *)clPetDetailVC didSavePet:(CLPetDog *)pet
+{
+    [self requestDogList];
+    [self.navigationController popViewControllerAnimated:YES];
+}
 #pragma mark - IBAction
 
 /**
@@ -108,6 +116,8 @@
 - (void)goToAddPet
 {
     CLPetDetailVC *vc = [[CLPetDetailVC alloc] init];
+    vc.delegate = self;
+    vc.ownerNo = self.ownerNo;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

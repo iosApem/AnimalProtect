@@ -10,4 +10,12 @@
 
 @implementation APDataService
 
+- (instancetype)init
+{
+    if (self = [super init]) {
+        self.jsonParser = [[Hbb_JSONParser alloc] init];
+    }
+    return self;
+}
+
 @end

@@ -22,11 +22,15 @@
         NSDictionary *dict = @{@"userName": (users.UserName ?: @""), @"password": (users.PWD ?: @"")};
         [[APHTTPSession sharedSession] httpGETWithKey:api_key_core_LoginJson_action param:dict progress:nil succ:^(id responseObject) {
             
-            APHTTPResult *rs = [[APHTTPResult alloc] initWithString:responseObject error:nil];
-            
-            [APUsers setCurrentUser:block_user];
+            APHTTPResult *rs = [self.jsonParser jsonStringToBean:responseObject cls:[APHTTPResult class]];
             
             if (rs.success == YES) {
+                NSDictionary *dataDict = rs.data;
+                if (dataDict != nil) {
+                    block_user = [self.jsonParser dictionaryToBean:dataDict cls:[APUsers class]];
+                }
+                [APUsers setCurrentUser:block_user];
+                
                 if (succ) {
                     succ();
                 }

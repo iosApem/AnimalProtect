@@ -107,7 +107,6 @@
         
         [self.loginService loginWithUsers:user succ:^{
             
-            [APUsers setCurrentUser:user];
             
             //跳转
             WBWorkBenchVC *workVC = [[WBWorkBenchVC alloc] init];

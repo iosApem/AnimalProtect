@@ -7,14 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "JSONModelLib.h"
 
 /**
  请求结果
  */
-@interface APHTTPResult : JSONModel
+@interface APHTTPResult : NSObject
 
 @property (nonatomic, assign) BOOL success;
 @property (nonatomic, strong) NSString *message;
+@property (nonatomic, strong) id data;
 
 @end

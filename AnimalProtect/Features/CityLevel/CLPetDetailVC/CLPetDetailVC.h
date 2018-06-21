@@ -7,6 +7,13 @@
 //
 
 #import "APBaseVC.h"
+#import "CLPetDog.h"
+
+@class CLPetDetailVC;
+@protocol CLPetDetailVCDelegate<NSObject>
+@optional
+- (void)clPetDetailVC:(CLPetDetailVC *)clPetDetailVC didSavePet:(CLPetDog *)pet;
+@end
 
 /**
  宠物详情
@@ -15,6 +22,8 @@
  */
 @interface CLPetDetailVC : APBaseVC
 
-@property (nonatomic, strong) NSString *dogID;
+@property (nonatomic, strong) NSString *dogID;      //犬ID     (编辑必须)
+@property (nonatomic, strong) NSString *ownerNo;    //犬主编号 (新增必须)
+@property (nonatomic, weak) id<CLPetDetailVCDelegate> delegate;
 
 @end

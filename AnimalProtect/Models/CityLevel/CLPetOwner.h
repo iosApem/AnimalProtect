@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CommTFSelectObject.h"
 
 /**
  宠物主信息
@@ -32,5 +33,13 @@
 @property (nonatomic, strong) NSString *village;
 @property (nonatomic, strong) NSString *villageName;
 @property (nonatomic, strong) NSString *password;
+
+
+/**
+ 宠物主数组转化为选择数组
+
+ @param ownerArray 宠物主数组
+ */
++ (NSArray<CommTFSelectObject *> *)dictArrayWithArray:(NSArray<CLPetOwner *> *)ownerArray;
 
 @end

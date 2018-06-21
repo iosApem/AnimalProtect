@@ -10,9 +10,9 @@
 #import "APHTTPSession.h"
 #import "APAPIConstants.h"
 #import "NSString+APUtils.h"
-#import "JSONModelLib.h"
 #import "APHTTPResult.h"
 #import "MJExtension.h"
+#import "Hbb_JSONParser.h"
 
 
 typedef void(^APDataServiceSuccBlock)(void);
@@ -27,5 +27,7 @@ typedef void(^APDataServiceArraySuccBlock)(NSArray *array);
  @author apem
  */
 @interface APDataService : NSObject
+
+@property (nonatomic, strong) Hbb_JSONParser *jsonParser;
 
 @end
