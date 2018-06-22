@@ -277,6 +277,9 @@
 
 - (void)requestSubmitImmune:(CLImmuneRecord *)record
 {
+    //缩回键盘
+    [self.view endEditing:YES];
+    
     [self showHUBText:@"正在提交.."];
     [self.dataService requestSubmitImmune:record succ:^{
         [self hiddenHUB];

@@ -100,6 +100,9 @@
     APUsers *user = [self collectUsers];
     user.userType = APUsersTypePetOwner;
     
+    //缩回键盘
+    [self.view endEditing:YES];
+    
     user.PWD = @"888888";
 
     //验证码对了

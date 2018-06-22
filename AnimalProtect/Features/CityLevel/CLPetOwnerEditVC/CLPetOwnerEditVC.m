@@ -181,6 +181,9 @@
 
 - (void)submitSheet
 {
+    //缩回键盘
+    [self.view endEditing:YES];
+    
     CLPetOwner *person = [self getPersonFromNib];
     [self showHUBText:@"正在提交.."];
     [self.dataService requestSubmitPetOwner:person succ:^{

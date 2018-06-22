@@ -75,6 +75,9 @@
     APUsers *user = [self collectUsers];
     user.userType = APUsersTypeCityLevel;
     
+    //缩回键盘
+    [self.view endEditing:YES];
+    
     [self showHUBText:@"正在登录.."];
     [self.loginService loginWithUsers:user succ:^{
         [self hiddenHUB];
