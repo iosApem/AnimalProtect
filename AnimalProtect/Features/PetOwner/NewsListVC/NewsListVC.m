@@ -70,7 +70,7 @@
     CLNews *news = [self.newsArray objectAtIndex:indexPath.row];
     
     NewsDetailVC *vc = [[NewsDetailVC alloc] init];
-    vc.newsID = news.newsID;
+    vc.newsID = news.id;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

@@ -20,6 +20,6 @@
 #define api_key_sys_FindOrg_action @"sys/FindOrg.action"  //查找机构接口
 #define api_key_sys_SysDictFindJson_action @"sys/SysDictFindJson.action"  //查找接口接口
 
-
+#define api_key_article_ArticleManageJson_action @"article/ArticleManageJson.action"        //获取时事新闻列表
 
 #endif /* APAPIConstants_h */

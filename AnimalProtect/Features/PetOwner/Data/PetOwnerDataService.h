@@ -17,5 +17,5 @@
 
 - (void)requestNewsList:(APDataServiceArraySuccBlock)succ fail:(APDataServiceFailBlock)fail;
 
-- (void)requestWithNewsID:(NSString *)newsID succ:(void(^)(CLNews *news))succ fail:(APDataServiceFailBlock)fail;
+- (void)requestWithNewsID:(NSNumber *)newsID succ:(void(^)(CLNews *news))succ fail:(APDataServiceFailBlock)fail;
 @end

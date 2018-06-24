@@ -15,9 +15,10 @@
  */
 @interface CLNews : NSObject
 
-@property (nonatomic, strong) NSString *newsID;
+@property (nonatomic, strong) NSNumber *id;
 @property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSString *createTime;
+@property (nonatomic, strong) NSString *modifTime;
 @property (nonatomic, strong) NSString *content;
-@property (nonatomic, strong) NSString *createDate;
 
 @end
