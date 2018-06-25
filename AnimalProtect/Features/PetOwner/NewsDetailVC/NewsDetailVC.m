@@ -13,7 +13,7 @@
 @interface NewsDetailVC ()
 
 @property (weak, nonatomic) IBOutlet UILabel *titleL;
-@property (weak, nonatomic) IBOutlet UILabel *contentL;
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 @property (nonatomic, strong) PetOwnerDataService *petService;
 
@@ -45,7 +45,8 @@
 - (void)setNibWithModel:(CLNews *)news
 {
     self.titleL.text = news.title;
-    self.contentL.text = news.content;
+    
+    [self.webView loadHTMLString:news.content baseURL:nil];
 }
 
 - (void)requestNews

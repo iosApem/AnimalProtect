@@ -25,7 +25,7 @@
 {
     _news = news;
     self.titleL.text = _news.title;
-    self.dateL.text = _news.createDate;
+    self.dateL.text = _news.createTime;
 }
 
 @end

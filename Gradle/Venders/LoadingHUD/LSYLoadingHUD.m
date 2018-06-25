@@ -183,6 +183,17 @@ static void * ShowInVC = @"ShowInVC";
 -(void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];
+    
+    /**
+     apem
+     2018-06-21 22:52:22
+     在父控制器的view变化时,子控制器的view也随之变化
+     */
+    UIViewController *parentVC = self.parentViewController;
+    if (parentVC != nil) {
+        self.view.frame = parentVC.view.bounds;
+    }
+    
     _activity.frame = CGRectMake((self.view.frame.size.width - 100)/2, self.view.frame.size.height/2-100, 100, 100);
     _loadingView.frame = CGRectMake((self.view.frame.size.width - 100)/2, self.view.frame.size.height/2-100, 100, 100);
     _stateView.frame = CGRectMake((self.view.frame.size.width - 100)/2, self.view.frame.size.height/2-100, 100, 100);

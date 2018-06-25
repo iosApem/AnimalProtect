@@ -15,6 +15,6 @@
  */
 @interface NewsDetailVC : APBaseVC
 
-@property (nonatomic, strong) NSString *newsID;
+@property (nonatomic, strong) NSNumber *newsID;
 
 @end
